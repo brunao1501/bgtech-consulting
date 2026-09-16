@@ -23,3 +23,39 @@ nav>.nav-cta:hover{color:white;background:linear-gradient(115deg,#25498d,#2a61c3
 #motion{background:#14213c;border-color:#45629266;color:#c8d8ef}
 @media(max-width:700px){h1{font-size:clamp(43px,12.5vw,66px)}h2,.section-head h2{font-size:clamp(32px,8.5vw,42px)}.intro{font-size:16px}.actions{gap:12px}.actions .button,.actions .text-link{width:100%;justify-content:space-between}.service>p{min-height:0}}
 @media(prefers-reduced-motion:reduce){.button:hover,.nav-cta:hover,.text-link:hover,.service>a:hover{transform:none}}
+
+/* Logo transparente aprovado e camada de movimento cinematográfico. */
+.brand{width:205px;height:70px;overflow:visible;display:flex;align-items:center;transform:none}
+.brand img{position:static;width:100%;height:100%;max-width:100%;object-fit:contain;mix-blend-mode:normal}
+footer .brand{width:205px}
+.scroll-progress{position:fixed;inset:0 0 auto;height:3px;z-index:50;pointer-events:none;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#3167ff,#2ce0ef,#a88aff);box-shadow:0 0 13px #2ce0ef88}
+.hero,.statement,.contact{position:relative;isolation:isolate}
+.hero:before,.statement:before,.contact:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 72% 30%,#1d54bc26,transparent 58%),radial-gradient(ellipse at 15% 85%,#19576c20,transparent 45%);background-size:140% 140%;animation:ambient-drift 16s ease-in-out infinite alternate;animation-play-state:paused}
+.fx-visible:before{animation-play-state:running}
+.hero-copy{animation:hero-enter .95s ease-out both}
+.stage{animation:hero-enter 1.2s .12s ease-out both}
+.orbit-label{animation:label-float 6s ease-in-out infinite;animation-play-state:paused}
+.fx-visible .orbit-label{animation-play-state:running}
+.label-two{animation-delay:-3s}
+h1 em,.contact em{background-size:180% 100%;animation:spectral-light 9s ease-in-out infinite alternate;animation-play-state:paused}
+.fx-visible em{animation-play-state:running}
+.service{position:relative;overflow:hidden}
+.service:before{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(350px circle at var(--light-x,50%) var(--light-y,0%),#449aff20,transparent 70%);opacity:0;transition:opacity .35s}
+.service:hover:before{opacity:1}
+.primary,.nav-cta{position:relative;overflow:hidden}
+.primary:after,.nav-cta:after{content:'';position:absolute;inset:-80% -50%;background:linear-gradient(110deg,transparent 40%,#ffffff20 50%,transparent 60%);transform:translateX(-85%) rotate(8deg);pointer-events:none}
+.primary:hover:after,.nav-cta:hover:after{animation:button-sheen .8s ease-out}
+.button span,.nav-cta span{display:inline-block;transition:transform .3s}
+.button:hover span,.nav-cta:hover span{transform:translate(3px,-3px)}
+.steps article{transition:opacity .65s,transform .65s,border-color .3s}
+.steps article:hover{border-color:#2ce0ef}
+.sector-list span{transition:background .3s,border-color .3s,transform .3s}
+.sector-list span:hover{background:#1c396450;border-color:#6399d477;transform:translateY(-3px)}
+.page-hidden *,.page-hidden *:before,.page-hidden *:after{animation-play-state:paused!important}
+@keyframes ambient-drift{from{background-position:0% 20%}to{background-position:100% 80%}}
+@keyframes hero-enter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes label-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes spectral-light{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes button-sheen{to{transform:translateX(85%) rotate(8deg)}}
+@media(max-width:700px){.brand,footer .brand{width:176px;height:60px}.hero:before,.statement:before,.contact:before{animation:none}.orbit-label{animation-duration:8s}}
+@media(prefers-reduced-motion:reduce){.hero-copy,.stage{opacity:1;transform:none}.button:hover span,.nav-cta:hover span,.sector-list span:hover{transform:none}.scroll-progress{display:none}}
