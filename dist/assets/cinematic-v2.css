@@ -1,0 +1,109 @@
+/* BGTech Consulting | Motion Direction v2
+   GPU-friendly transforms, real-time canvas, responsive DOM scenes.
+   Motion respects prefers-reduced-motion. */
+.home-shell .home-hero { isolation:isolate; overflow:hidden; }
+.home-shell .pro-atmosphere {position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;opacity:.95;}
+.home-shell .home-hero::before {opacity:.2;}
+.home-shell .hero-light {opacity:.10}
+.home-shell .home-hero-inner {position:relative;z-index:2;}
+.home-shell .hero-title {letter-spacing:-.072em;position:relative;}
+.home-shell .hero-title span {animation:none !important;opacity:1;transform:none;}
+.home-shell .hero-title .gradient-line {background-image:linear-gradient(105deg,#f0faff,#65e5ff,#147af3);background-size:200% auto;animation:pro-gradient-drift 7s ease-in-out infinite alternate !important;}
+@keyframes pro-gradient-drift {from{background-position:0 50%}to{background-position:100% 50%}}
+.home-shell .hero-enter {animation:none !important;opacity:1;transform:none;}
+.home-shell .cinema-stage.hero-enter {animation:none !important;opacity:1;transform:none;}
+.home-shell .cinema-stage.pro-ready {perspective:1500px;min-height:650px;overflow:visible;}
+.home-shell .cinema-stage.pro-ready > .cinema-screen,
+.home-shell .cinema-stage.pro-ready > .motion-gallery,
+.home-shell .cinema-stage.pro-ready > .stage-label,
+.home-shell .cinema-stage.pro-ready > .stage-index,
+.home-shell .cinema-stage.pro-ready > .stage-cross {display:none !important;}
+.home-shell .pro-visual {position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;}
+.home-shell .pro-visual a,.home-shell .pro-visual button {pointer-events:auto;}
+.home-shell .pro-wire {position:absolute;inset:9% 0 6% -2%;border-radius:50%;border:1px solid rgba(48,149,231,.22);transform:rotate(-23deg);background:radial-gradient(ellipse at center,rgba(19,117,201,.055),transparent 65%);}
+.home-shell .pro-wire::before,.home-shell .pro-wire::after {content:"";position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(75,187,248,.13);}
+.home-shell .pro-wire::after {inset:26%;border-color:rgba(87,223,244,.13);}
+.home-shell .pro-browser {--rx:0deg;--ry:0deg;position:absolute;top:13%;left:3.5%;right:4%;bottom:10%;overflow:hidden;border-radius:20px;border:1px solid rgba(144,210,249,.38);background:#061522;transform:rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(-2deg);transform-style:preserve-3d;box-shadow:0 42px 98px rgba(0,4,12,.68),0 0 0 7px rgba(54,136,203,.045),0 0 100px rgba(9,122,232,.15);transition:transform .42s cubic-bezier(.22,.78,.22,1);will-change:transform;}
+.home-shell .pro-browser:focus-within {border-color:#7ee6ff;}
+.home-shell .pro-browser-top {display:flex;align-items:center;justify-content:space-between;gap:10px;height:45px;padding:0 17px;border-bottom:1px solid rgba(185,230,255,.16);background:rgba(4,15,27,.97);}
+.home-shell .pro-browser-dots {display:flex;gap:6px;}
+.home-shell .pro-browser-dots i {display:block;width:6px;height:6px;border-radius:100%;background:#50758c;}
+.home-shell .pro-browser-dots i:first-child {background:#2bd3ec;box-shadow:0 0 14px rgba(43,211,236,.6);}
+.home-shell .pro-browser-url {font-size:10px;letter-spacing:.09em;color:#78a1be;}
+.home-shell .pro-browser-status {display:flex;align-items:center;gap:7px;font-size:9px;letter-spacing:.1em;color:#83c5db;text-transform:uppercase;}
+.home-shell .pro-browser-status::before {content:"";width:5px;height:5px;border-radius:50%;background:#56eac4;box-shadow:0 0 12px #56eac477;}
+.home-shell .pro-browser-content {height:calc(100% - 45px);position:relative;isolation:isolate;padding:clamp(23px,4vw,46px);background:radial-gradient(ellipse at 66% 26%,rgba(7,101,184,.27),transparent 63%),#07131f;overflow:hidden;}
+.home-shell .pro-browser-content::after {content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(3,11,19,.96) 0%,rgba(3,11,19,.75) 44%,rgba(3,11,19,.14) 100%),linear-gradient(0deg,rgba(3,11,19,.95),transparent 25%);pointer-events:none;}
+.home-shell .pro-image-frame {position:absolute;z-index:-2;inset:0 0 0 32%;overflow:hidden;}
+.home-shell .pro-image-frame img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.8) contrast(1.12);transform:scale(1.04);opacity:.82;}
+.home-shell .pro-device-brand {display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#fff;letter-spacing:-.02em;}
+.home-shell .pro-device-brand i {width:7px;height:7px;background:#30cde6;border-radius:3px;transform:rotate(45deg);}
+.home-shell .pro-device-tags {display:flex;align-items:center;gap:18px;margin-top:25px;font-size:10px;color:#a3cee1;}
+.home-shell .pro-kicker {display:block;margin-top:clamp(30px,6vw,65px);font-size:10px;letter-spacing:.19em;font-weight:800;color:#6fe2f4;text-transform:uppercase;}
+.home-shell .pro-headline {font-family:Manrope,sans-serif;max-width:380px;margin:13px 0 14px;color:#fff;font-size:clamp(1.8rem,3.3vw,3.5rem);font-weight:750;line-height:1.04;letter-spacing:-.058em;}
+.home-shell .pro-description {max-width:285px;color:#bfcede;font-size:12px;line-height:1.7;}
+.home-shell .pro-inbrowser-cta {display:inline-flex;gap:9px;align-items:center;margin-top:24px;color:#d4f5ff;font-weight:800;text-decoration:none;font-size:12px;border-bottom:1px solid #5cd5ed;padding-bottom:7px;}
+.home-shell .pro-inbrowser-cta:hover {color:#fff;}
+.home-shell .pro-case-count {position:absolute;bottom:30px;left:clamp(23px,4vw,46px);color:#6b92ac;font-size:10px;letter-spacing:.15em;font-weight:800;}
+.home-shell .pro-case-progress {position:absolute;display:flex;gap:6px;bottom:28px;right:28px;}
+.home-shell .pro-case-progress i {width:28px;height:2px;background:rgba(232,246,255,.25);}
+.home-shell .pro-case-progress i.active {background:#36c8ff;box-shadow:0 0 14px #36c8ff66;}
+.home-shell .pro-floating {position:absolute;z-index:3;padding:13px 15px;border:1px solid rgba(124,216,247,.29);border-radius:12px;background:linear-gradient(138deg,rgba(12,40,65,.95),rgba(4,18,31,.97));box-shadow:0 14px 40px rgba(0,5,15,.58);backdrop-filter:blur(14px);pointer-events:none;}
+.home-shell .pro-floating span {font-size:9px;color:#64d6f4;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
+.home-shell .pro-floating strong {display:block;margin-top:5px;font-size:12px;color:#e8f8ff;}
+.home-shell .pro-floating-a {top:5%;right:-2%;min-width:185px;}
+.home-shell .pro-floating-b {left:-4%;bottom:4%;min-width:218px;}
+.home-shell .pro-bar-flow {display:flex;align-items:end;gap:4px;height:33px;margin-top:10px;}
+.home-shell .pro-bar-flow i {display:block;width:13%;height:var(--height);background:linear-gradient(180deg,#2be4e7,#1c78d5);border-radius:2px 2px 0 0;animation:pro-flow 2.7s ease-in-out infinite alternate;animation-delay:var(--delay);}
+@keyframes pro-flow{to{transform:scaleY(.62)}}
+.home-shell .pro-sequence {position:absolute;inset:auto -2% -3% auto;z-index:5;display:flex;align-items:center;gap:9px;color:#76b1d1;font-size:9px;letter-spacing:.12em;text-transform:uppercase;}
+.home-shell .pro-sequence b {color:#bfeeff;font-size:11px;}
+.home-shell .home-service-card .service-icon {transition:transform .5s cubic-bezier(.2,.75,.2,1),background .3s;}
+.home-shell .home-service-card:hover .service-icon {transform:rotate(-6deg) scale(1.08);background:rgba(40,216,231,.1);}
+.home-shell .home-models .model-card {transform-style:preserve-3d;}
+.home-shell .home-models .model-card:hover .model-image img{transform:scale(1.045);}
+.home-shell .home-statement {isolation:isolate;overflow:hidden;}
+.home-shell .home-statement::before {content:"";position:absolute;z-index:-1;inset:0;opacity:.28;background:radial-gradient(circle at var(--statement-x,50%) 50%,rgba(21,145,255,.52),transparent 32%);pointer-events:none;}
+.home-shell .pro-a11y-note {position:absolute;left:-9999px;}
+@media(min-width:901px){.home-shell .home-hero-inner {gap:30px;grid-template-columns:.92fr 1.08fr;}}
+@media(max-width:1100px){
+  .home-shell .cinema-stage.pro-ready {min-height:560px;}
+  .home-shell .pro-browser {left:3%;right:1%;top:12%;bottom:12%;}
+  .home-shell .pro-floating-a{right:-1%}.home-shell .pro-floating-b{left:-1%}
+}
+@media(max-width:900px) {
+  .home-shell .cinema-stage.pro-ready{width:min(100%,680px);min-height:545px;}
+  .home-shell .pro-browser {left:3%;right:3%;top:12%;bottom:12%;transform:rotateZ(-1deg);}
+  .home-shell .pro-floating-a {right:0;top:5%;}
+}
+@media(max-width:620px){
+  .home-shell .cinema-stage.pro-ready {min-height:460px;overflow:visible;}
+  .home-shell .pro-browser {top:10%;bottom:14%;left:0;right:0;transform:none;}
+  .home-shell .pro-browser-content {padding:20px;}
+  .home-shell .pro-browser-dots i {width:5px;height:5px;}
+  .home-shell .pro-browser-url {font-size:8px;}
+  .home-shell .pro-browser-status {display:none;}
+  .home-shell .pro-image-frame {left:27%;}
+  .home-shell .pro-browser-content::after {background:linear-gradient(90deg,rgba(3,11,19,.98),rgba(3,11,19,.84) 48%,rgba(3,11,19,.32)),linear-gradient(0deg,rgba(3,11,19,.85),transparent 30%);}
+  .home-shell .pro-device-tags {gap:12px;margin-top:16px;font-size:9px;}
+  .home-shell .pro-kicker {margin-top:32px;font-size:8px;}
+  .home-shell .pro-headline {max-width:270px;font-size:clamp(1.75rem,7vw,2.6rem);}
+  .home-shell .pro-description{font-size:10px;max-width:220px;}
+  .home-shell .pro-inbrowser-cta{font-size:10px;margin-top:14px;}
+  .home-shell .pro-floating{padding:9px 11px;}
+  .home-shell .pro-floating-a {top:4%;right:-2%;min-width:auto;}
+  .home-shell .pro-floating-b {bottom:3%;left:2%;min-width:165px;}
+  .home-shell .pro-floating span{font-size:7px;}
+  .home-shell .pro-floating strong{font-size:10px;}
+  .home-shell .pro-bar-flow {height:18px;margin-top:5px;}
+  .home-shell .pro-case-count {bottom:16px;left:20px;}
+  .home-shell .pro-case-progress {bottom:17px;right:13px;}
+  .home-shell .pro-sequence{display:none;}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-shell .pro-atmosphere {display:none}
+ .home-shell .hero-title .gradient-line {animation:none!important}
+ .home-shell .pro-bar-flow i {animation:none!important}
+ .home-shell .pro-browser {transform:none!important;transition:none!important;will-change:auto}
+ .home-shell .pro-floating {transform:none!important}
+}
