@@ -21,6 +21,11 @@
   ],
   "redirects": [
     {
+      "source": "/portfolio",
+      "destination": "https://drive.google.com/file/d/13HX2EGRY8lcPRXUgZrhptH91xbmZ62B3/view",
+      "permanent": false
+    },
+    {
       "source": "/dentista/:path*",
       "destination": "/modelos/dentista/:path*",
       "permanent": true
