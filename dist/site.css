@@ -182,3 +182,27 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .typing-dots{display:none}
   .chat-card .b2{margin-top:10px}
 }
+
+/* Brilho azul que segue o mouse pela página toda */
+.cursor-glow{position:fixed;left:0;top:0;width:720px;height:720px;margin:-360px 0 0 -360px;border-radius:50%;background:radial-gradient(circle,rgba(70,120,230,.30) 0%,rgba(52,96,200,.14) 32%,transparent 66%);pointer-events:none;z-index:0;opacity:0;transition:opacity .6s;will-change:transform;mix-blend-mode:screen}
+.cursor-glow.on{opacity:1}
+main,.footer{position:relative;z-index:1}
+.section{background:transparent}
+.site-header{z-index:40}
+
+/* Ícones do rodapé */
+.socials{display:flex;gap:10px}
+.social{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--fg);transition:color .3s,border-color .3s,background .3s,transform .3s var(--ease)}
+.social:hover{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.footer-links{align-items:center}
+
+/* Botão flutuante do WhatsApp */
+.wa-fab{position:fixed;z-index:45;right:calc(22px + env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;height:60px;padding:0 15px;border-radius:999px;background:#25D366;color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.45);font-weight:600;font-size:15px;animation:fadeUp .6s var(--ease) 2.2s both;transition:transform .3s var(--ease),box-shadow .3s}
+.wa-fab span{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s var(--ease),margin .4s;margin-right:0}
+.wa-fab:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(37,211,102,.35)}
+.wa-fab:hover span,.wa-fab:focus-visible span{max-width:140px;margin-right:4px}
+.wa-fab::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(37,211,102,.55);animation:waPulse 2.6s 3s infinite}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%,100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+@media (max-width:760px){.wa-fab{height:56px;padding:0 13px}}
+@media (hover:none){.cursor-glow{display:none}}
+.footer{padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))}

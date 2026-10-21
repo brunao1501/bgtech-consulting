@@ -14,6 +14,9 @@ const header=$('.site-header');const onScroll=()=>header.classList.toggle('scrol
 // Brilho do hero segue o mouse
 const hero=$('.hero'),glow=$('.glow');
 if(!reduced&&hero&&glow){hero.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const r=hero.getBoundingClientRect();glow.style.setProperty('--gx',((e.clientX-r.left)/r.width*100)+'%');glow.style.setProperty('--gy',((e.clientY-r.top)/r.height*100)+'%')},{passive:true})}
+// Brilho azul que segue o mouse (suavizado)
+const cg=$('.cursor-glow');
+if(cg&&!reduced&&matchMedia('(hover:hover)').matches){let tx=innerWidth/2,ty=innerHeight/3,x=tx,y=ty,raf=0;const step=()=>{x+=(tx-x)*.12;y+=(ty-y)*.12;cg.style.transform=`translate3d(${x}px,${y}px,0)`;raf=Math.abs(tx-x)+Math.abs(ty-y)>.5?requestAnimationFrame(step):0};addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;tx=e.clientX;ty=e.clientY;cg.classList.add('on');if(!raf)raf=requestAnimationFrame(step)},{passive:true});document.addEventListener('mouseleave',()=>cg.classList.remove('on'))}
 // Revelar ao rolar, com pequeno escalonamento entre irmãos
 if('IntersectionObserver' in window&&!reduced){const io=new IntersectionObserver(entries=>entries.forEach(en=>{if(!en.isIntersecting)return;const el=en.target,sib=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));el.style.transitionDelay=(Math.max(0,sib.indexOf(el))*90)+'ms';el.classList.add('in-view');io.unobserve(el)}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});$$('.reveal').forEach(n=>io.observe(n))}else $$('.reveal').forEach(n=>n.classList.add('in-view'));
 // Demonstrações
