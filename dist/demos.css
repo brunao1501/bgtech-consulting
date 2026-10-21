@@ -1,0 +1,121 @@
+/* Demonstrações (agendamento e central de atendimento) */
+dialog{width:min(900px,94vw);max-height:88svh;padding:0;background:#f5f7fa;color:#25364c;border:1px solid #abc0dc;border-radius:12px;box-shadow:0 30px 120px #000b}
+dialog::backdrop{background:#020611cc;backdrop-filter:blur(12px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;padding:24px 30px;background:#fff;border-bottom:1px solid #dde4ee;position:sticky;top:0;z-index:2}
+.dialog-head small{font-size:8px;color:#788a9f;letter-spacing:1px}
+.dialog-head h2{font-size:25px;letter-spacing:-1px;margin-top:8px}
+.dialog-head button{border:1px solid #d5ddea;background:none;border-radius:50%;width:34px;height:34px;color:#33475e;font-size:23px}
+#demo-body{padding:30px}
+.demo-tabs{display:flex;gap:12px;margin-bottom:25px}
+.demo-tabs button{background:#fff;border:1px solid #cdd6e4;border-radius:5px;padding:9px 14px;font-size:12px;color:#3d5572}
+.demo-tabs button.chosen{background:#253d5b;color:white}
+.site-demo{background:#e9e4d8;padding:32px;border-radius:6px;color:#3b4535;min-height:280px}
+.site-demo h3{font:40px/1.1 Georgia;margin:15px 0}
+.site-demo p{font-size:14px;line-height:1.8;max-width:500px}
+.site-demo .architecture{height:170px;float:right;width:33%;margin:0 0 20px 20px}
+.agenda-demo{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.demo-form label{display:block;font-size:12px;margin-bottom:17px}
+.demo-form input,.demo-form select{display:block;width:100%;padding:12px;background:white;color:#273b55;border:1px solid #cbd6e3;border-radius:5px;margin-top:7px}
+.action{padding:12px 18px;background:#2a4d7b;color:#fff;border:0;border-radius:5px;font-size:12px}
+.agenda-list{border:1px solid #d4dfe9;background:white;border-radius:6px;padding:20px}
+.agenda-list h3{font-size:17px;margin-top:0}
+.booking{padding:15px 0;border-top:1px solid #e3e8ef;font-size:12px}
+.booking small{display:block;color:#73879f;margin-top:5px}
+.feedback{color:#39745b;font-size:12px;line-height:1.6}
+.demo-chat{max-width:520px;margin:auto}
+.conversation{min-height:150px;max-height:310px;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:5px 5px 20px}
+.conversation p{font-size:13px;line-height:1.6;background:#e1e9f3;border-radius:10px;padding:13px 16px;margin:0;max-width:90%}
+.conversation p.user{align-self:flex-end;background:#c4d9f3}
+.chat-options{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.chat-options button{background:white;color:#335a8a;border:1px solid #afc4df;border-radius:20px;font-size:12px;padding:10px 14px}
+.demo-note{font-size:10px;color:#75879e;line-height:1.6;margin-top:24px}
+.empty-note{font-size:12px;color:#7c8ba0}
+/* Support experience */
+.support-dialog{width:min(1040px,95vw);background:#f1f4f8}
+.support-dialog #demo-body{padding:0}
+.support-dialog .dialog-head{padding:17px 25px}
+.support-dialog .dialog-head h2{font-size:22px}
+.support-lab{display:grid;grid-template-columns:290px 1fr;height:590px;max-height:70svh;--chat-accent:#237f78}
+.support-sidebar{background:#fbfcfe;border-right:1px solid #dce3ec;padding:25px 20px;overflow:auto}
+.lab-brand{display:flex;gap:10px;align-items:center;font-size:12px;color:#263b58;margin-bottom:30px}
+.lab-brand>span{display:grid;place-items:center;width:35px;height:35px;background:#172f51;color:white;border-radius:10px;font-weight:700;font-size:11px}
+.lab-brand small{display:block;font-size:6px;letter-spacing:1px;margin-top:5px;color:#8c99ac}
+.sidebar-label{font-size:8px;letter-spacing:1.3px;color:#7d8ca1}
+.scenario-list{display:flex;flex-direction:column;gap:8px;margin-top:15px}
+.scenario-list button{display:flex;gap:10px;align-items:center;border:1px solid transparent;background:transparent;text-align:left;border-radius:9px;padding:11px 9px;color:#52657e;font-size:11px;width:100%}
+.scenario-list button.active{background:#e9eff7;border-color:#d4deeb;color:#243b59}
+.scenario-list button small{display:block;color:#8795a7;font-size:9px;margin-top:4px}
+.scenario-list i{font-style:normal;margin-left:auto;color:#95a8be}
+.business-avatar{display:grid;place-items:center;width:35px;height:35px;flex-shrink:0;border-radius:10px;background:var(--chat-accent);color:white;font-size:11px;font-weight:700}
+.request-summary{border-top:1px solid #e1e7ef;margin-top:26px;padding-top:22px}
+#request-summary>div{margin-top:17px}
+#request-summary small{display:block;font-size:9px;color:#8d9cb0;margin-bottom:5px}
+#request-summary strong{font-weight:500;font-size:11px;color:#3b5270;line-height:1.5}
+#request-summary p{font-size:11px;line-height:1.6;color:#8a98ad}
+.sidebar-note{display:flex;gap:13px;align-items:center;color:#9aadc5;border-top:1px solid #e1e7ef;margin-top:25px;padding-top:16px}
+.sidebar-note p{font-size:10px;line-height:1.6}
+.support-thread{display:flex;flex-direction:column;min-height:0;min-width:0;background:#eef2f6}
+.thread-head{position:static;flex-shrink:0;height:76px;display:flex;justify-content:flex-start;align-items:center;padding:0 25px;background:white;border-bottom:1px solid #dce3ec;backdrop-filter:none;gap:12px;z-index:auto}
+.thread-head strong{font-size:13px;color:#253c58}
+.thread-head small{display:block;font-size:9px;color:#8799aa;margin-top:5px}
+.thread-head small i{display:inline-block;width:5px;height:5px;border-radius:50%;background:#63a189;margin-right:3px}
+.thread-head button{margin-left:auto;background:#f4f7fa;border:1px solid #dce4ee;width:31px;height:31px;border-radius:8px;color:#6f85a0;font-size:17px}
+.thread-messages{flex:1;overflow:auto;min-height:150px;padding:23px;display:flex;flex-direction:column;gap:14px;background:radial-gradient(circle at 1px 1px,#8ca5c817 1px,transparent 0) 0 0/18px 18px}
+.thread-day{font-size:7px;letter-spacing:1.1px;color:#8b9cb2;text-align:center;margin:0 0 9px}
+.thread-bubble{max-width:84%;padding:12px 15px;border-radius:12px;background:white;border:1px solid #e0e6ee;box-shadow:0 2px 4px #1d365009;align-self:flex-start;border-bottom-left-radius:3px}
+.thread-bubble p{font-size:12px;line-height:1.65;margin:0;color:#3d536f}
+.thread-bubble>small{display:block;text-align:right;font-size:7px;color:#9aa8ba;margin-top:7px}
+.thread-bubble.sent{align-self:flex-end;background:#dfeaf8;border-color:#d2dff1;border-radius:12px 12px 3px 12px}
+.thread-bubble.sent small{color:#7192b7}
+.reply-area{padding:17px 23px 12px;background:#fbfcfe;border-top:1px solid #dce4ee}
+.reply-options{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.reply-options button{font-size:10px;line-height:1.4;border:1px solid #ccd9e9;color:#3e608b;background:white;padding:9px 12px;border-radius:20px}
+.reply-options button:hover{background:#edf3fc}
+.message-form{display:flex;gap:9px;border:1px solid #dce4ef;border-radius:10px;padding:6px;background:#fff}
+.message-form input{flex:1;min-width:0;border:0;background:none;color:#3d526e;padding:7px;font-size:11px}
+.message-form button{border:0;background:#233e63;color:white;border-radius:7px;width:31px;font-size:20px}
+.simulation-label{display:block;text-align:center;font-size:6px;letter-spacing:.7px;color:#9aa8ba;margin-top:12px}
+.typing{display:flex;gap:5px;padding:17px;align-self:flex-start;background:white;border-radius:10px}
+.typing i{height:5px;width:5px;background:#8ba0b9;border-radius:50%;animation:typing 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}
+.typing i:nth-child(3){animation-delay:.3s}
+@keyframes typing{50%{opacity:.3;transform:translateY(-3px)}
+}
+.handoff-card{background:#fff;border:1px solid #cbded6;padding:18px;border-radius:10px;color:#375e50}
+.handoff-card strong{font-size:12px}
+.handoff-card p{font-size:11px;line-height:1.6;color:#7b8f87}
+.support-cta{display:inline-block;background:#213c61;color:#fff;padding:11px 13px;border-radius:6px;font-size:10px}
+@media(max-width:760px){
+.dialog-head{padding:20px}
+.dialog-head small{font-size:6px}
+.dialog-head h2{font-size:21px}
+#demo-body{padding:20px}
+.agenda-demo{grid-template-columns:1fr}
+.site-demo{padding:22px}
+.site-demo h3{font-size:31px}
+.site-demo .architecture{float:none;width:100%;height:150px;margin:0 0 24px}
+.demo-tabs{gap:6px}
+.demo-tabs button{padding:9px 10px;font-size:10px}
+.support-dialog{max-height:94svh}
+.support-lab{grid-template-columns:1fr;height:72svh;max-height:none}
+.support-sidebar{padding:10px 12px;border-right:0;border-bottom:1px solid #dce4ee;overflow:visible}
+.lab-brand,.support-sidebar>.sidebar-label,.request-summary,.sidebar-note{display:none}
+.scenario-list{flex-direction:row;margin:0;gap:5px}
+.scenario-list button{padding:7px;gap:5px;font-size:8px;justify-content:center;flex:1}
+.scenario-list button small,.scenario-list i{display:none}
+.scenario-list .business-avatar{width:23px;height:23px;font-size:7px;border-radius:6px}
+.support-thread{min-height:0}
+.support-lab{grid-template-rows:auto 1fr}
+.thread-head{height:58px;padding:0 15px}
+.thread-head strong{font-size:12px}
+.thread-messages{padding:15px;gap:12px}
+.thread-bubble{max-width:93%}
+.thread-bubble p{font-size:11px}
+.reply-area{padding:12px}
+.reply-options{margin-bottom:10px}
+.reply-options button{font-size:9px;padding:8px 10px}
+.support-dialog .dialog-head{padding:14px 18px}
+.support-dialog .dialog-head h2{font-size:18px}
+.simulation-label{font-size:5px}
+.sector-preview{height:300px}
+}
