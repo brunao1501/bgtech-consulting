@@ -14,10 +14,10 @@ function setScene(index){if(index===scene)return;scene=index;$$('.narrative').fo
 function render(){if(!frameId)frameId=requestAnimationFrame(tick)}
 function tick(time){frameId=0;let dt=Math.min(time-last||16,48);last=time;if(playing){let f=clamp((time-filmStart)/35000);window.scrollTo({top:f*(document.documentElement.scrollHeight-innerHeight),behavior:'instant'});if(f===1)stopFilm()}
 let target=clamp(scrollY/extent()*3.5,0,3.5);p=reduced?target:mix(p,target,1-Math.exp(-dt/110));setScene(clamp(Math.floor(p+.15),0,3));follow.x=mix(follow.x,mouse.x,.045);follow.y=mix(follow.y,mouse.y,.045);
-const mobile=innerWidth<=760;let entrance=smooth(time/1500);let phoneShow=smooth((p-.55)/.38)*(1-smooth((p-1.65)/.3));let zoom=smooth((p-1.32)/.35)*(1-smooth((p-1.83)/.28));let turn=scene===3?-5:scene===2?-9:-22+smooth(p)*10;
+const mobile=innerWidth<=760;let entrance=smooth(time/1500);let phoneShow=smooth((p-.55)/.38)*(1-smooth((p-1.65)/.3));let zoom=smooth((p-1.32)/.35)*(1-smooth((p-1.83)/.28));let turn=scene===3?-5:scene===2?-9:-22+smooth(p)*10;if(mobile)turn*=.45;
 if(reduced){phoneShow=scene===1?1:0;zoom=0;turn=-8}
-let sc=(mobile?.94:.85)+zoom*.18;let ry=turn+(reduced?0:follow.x*3),rx=5+(reduced?0:follow.y*2);let rz=mix(-3,0,smooth(p));let dy=reduced?0:(1-entrance)*32;
-$('.laptop').style.transform=`translate3d(${-zoom*45}px,${dy}px,${zoom*65}px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) scale(${sc})`;
+let sc=(mobile?.86:.85)+zoom*(mobile?.08:.18);let ry=turn+(reduced?0:follow.x*3),rx=5+(reduced?0:follow.y*2);let rz=mix(-3,0,smooth(p));let dy=reduced?0:(1-entrance)*32;
+$('.laptop').style.transform=`translate3d(${-zoom*(mobile?0:45)}px,${dy}px,${zoom*65}px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) scale(${sc})`;
 $('.phone').style.opacity=String(phoneShow);$('.phone').style.transform=`translate3d(${(1-phoneShow)*95}px,${(1-phoneShow)*65}px,140px) rotateY(${-15+phoneShow*10}deg) rotateZ(${4*phoneShow}deg)`;
 $$('.messenger .bubble').forEach((b,i)=>{let vis=reduced?(scene===3?1:0):smooth((p-2.8-i*.12)/.17);b.style.opacity=vis;b.style.transform=`translateY(${(1-vis)*15}px)`});
 let settling=Math.abs(p-target)>.002||Math.abs(mouse.x-follow.x)>.005||Math.abs(mouse.y-follow.y)>.005;
