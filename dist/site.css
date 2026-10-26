@@ -248,3 +248,14 @@ main,.footer{position:relative;z-index:1}
 .client-art.shot{display:block;background:#fff}
 .client-art.shot img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .client:hover .client-art.shot img{transform:scale(1.04)}
+.client-art.ig-profile{background:#FFFFFF;color:#111;display:grid;place-items:center;padding:24px}
+.igp{display:flex;align-items:center;gap:26px;max-width:100%;transition:transform .6s var(--ease)}
+.client:hover .igp{transform:scale(1.03)}
+.igp-avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;flex-shrink:0;padding:3px;background:linear-gradient(45deg,#F9CE34,#EE2A7B,#6228D7)}
+.igp-info{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:13px;line-height:1.45}
+.igp-info strong{font-size:18px;font-weight:500}
+.igp-stats{display:flex;gap:16px;color:#333}.igp-stats b{color:#111}
+.igp-name{font-weight:600;font-size:13px}
+.igp-info p{margin:0;color:#262626;font-size:13px}
+.igp-link{color:#00376B;font-weight:600;font-size:13px}
+@media (max-width:760px){.client-art.ig-profile{height:auto;padding:24px 18px}.igp{flex-direction:column;align-items:flex-start;gap:14px}.igp-avatar{width:84px;height:84px}}
