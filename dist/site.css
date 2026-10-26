@@ -206,3 +206,42 @@ main,.footer{position:relative;z-index:1}
 @media (max-width:760px){.wa-fab{height:56px;padding:0 13px}}
 @media (hover:none){.cursor-glow{display:none}}
 .footer{padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))}
+
+/* Clientes */
+.clients{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.client{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:border-color .4s,transform .4s var(--ease)}
+.client:hover{border-color:var(--line-2);transform:translateY(-4px)}
+.client-art{height:260px;display:grid;place-items:center;position:relative;overflow:hidden}
+.client-body{padding:30px 32px 34px;display:flex;flex-direction:column;gap:10px;flex:1}
+.client-body h3{font-size:28px;font-weight:500;margin:6px 0 0;letter-spacing:-.01em}
+.client-body p{color:var(--dim);margin:0 0 8px;flex:1}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);color:#C2CAD6}
+.ig-link{display:inline-flex;align-items:center;gap:8px}
+/* Miniatura D&D */
+.art-dd{background:linear-gradient(140deg,#2A2116,#14110C)}
+.browser{width:78%;background:#F4F1EA;border-radius:12px;overflow:hidden;box-shadow:0 24px 50px #0009;transform:rotate(-2deg);transition:transform .6s var(--ease)}
+.client:hover .browser{transform:rotate(0) scale(1.03)}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#E3DED3}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#C9C1B2}
+.browser .bar span{margin-left:10px;font-size:11px;color:#6B6458;background:#F4F1EA;border-radius:6px;padding:3px 10px}
+.browser .page{padding:22px 22px 26px;color:#2B2318}
+.browser .page b{font-family:var(--serif);font-size:44px;line-height:1;font-weight:400;color:#B4772C}
+.browser .page small{display:block;letter-spacing:.3em;font-size:11px;margin-top:6px;color:#5A5040}
+.browser .rows{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.browser .rows span{height:44px;border-radius:6px;background:#E3DCCD}
+/* Miniatura Instagram */
+.art-deia{background:linear-gradient(140deg,#2B1638,#121A33)}
+.ig{width:72%;background:#0F1218;border:1px solid #2A3040;border-radius:16px;padding:16px;box-shadow:0 24px 50px #0009;transform:rotate(2deg);transition:transform .6s var(--ease)}
+.client:hover .ig{transform:rotate(0) scale(1.03)}
+.ig-head{display:flex;align-items:center;gap:12px}
+.ig-head b{font-size:14px;font-weight:600}.ig-head small{display:block;font-size:12px;color:var(--mute)}
+.ring{width:48px;height:48px;border-radius:50%;padding:2px;background:linear-gradient(45deg,#F9CE34,#EE2A7B,#6228D7);flex-shrink:0}
+.ring span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#0F1218;font-size:14px;font-weight:600;border:2px solid #0F1218}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:14px}
+.ig-grid i{aspect-ratio:1;border-radius:4px;background:linear-gradient(135deg,#3A2A5C,#1F2B4D)}
+.ig-grid i:nth-child(2),.ig-grid i:nth-child(6){background:linear-gradient(135deg,#7A3A6E,#3A2A5C)}
+.ig-grid i:nth-child(4){background:linear-gradient(135deg,#2C4C7A,#3A2A5C)}
+@media (max-width:760px){.clients{grid-template-columns:1fr}.client-art{height:220px}.client-body{padding:24px}}
+.ig{width:66%;padding:14px}
+.ig-grid i:nth-child(n+4){display:none}
