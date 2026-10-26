@@ -245,3 +245,6 @@ main,.footer{position:relative;z-index:1}
 @media (max-width:760px){.clients{grid-template-columns:1fr}.client-art{height:220px}.client-body{padding:24px}}
 .ig{width:66%;padding:14px}
 .ig-grid i:nth-child(n+4){display:none}
+.client-art.shot{display:block;background:#fff}
+.client-art.shot img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.client:hover .client-art.shot img{transform:scale(1.04)}
