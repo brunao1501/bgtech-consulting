@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bgtech-consulting.vercel.app/sitemap.xml
+Sitemap: https://bgtechconsulting.com.br/sitemap.xml
