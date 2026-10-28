@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0B0E14">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#020204">
 <title>BGTech Consulting | Sites, Sistemas e Automação</title>
 <meta name="description" content="Sites profissionais, sistemas personalizados e atendimento com IA para pequenos negócios. Conheça as soluções da BGTech Consulting e converse sobre seu projeto.">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -21,182 +21,1169 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="demos.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('intro');setTimeout(function(){document.documentElement.classList.remove('intro')},4000);</script>
+<style>
+/* Layout: fixed 1172x657 design canvas scaled by one transform; 3D ring of BGTech models behind a browser mock; phone becomes a flow column */
+:root{--page:#020204;--fg:#fff;--sub:#a9aeb5;--cyan:#12E3F0;--blue:#1D5BFF;--card:#0d1117;
+  --sans:Poppins,Inter,system-ui,sans-serif;--serif:"Playfair Display",Georgia,serif;color-scheme:dark}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--page);overflow-x:hidden;scroll-behavior:smooth}
+body{min-height:100%;overflow-x:hidden;background:var(--page);color:var(--fg)}
+body{font-family:var(--sans);color:var(--fg);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.stage{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--page)}
+.canvas{position:absolute;left:50%;top:0;width:1172px;height:657px;transform:translateX(-50%) scale(var(--k,1));transform-origin:50% 0}
+.canvas>*{position:absolute}
+.stack{position:absolute;inset:0;z-index:300;pointer-events:none}
+.stack>*{position:absolute;pointer-events:auto}
+.navmenu{display:contents}
+.burger{display:none}
+.bg{inset:0;background:linear-gradient(180deg,rgba(25,127,255,0) 38%,rgba(25,127,255,.042) 54%,rgba(25,127,255,.052) 68%,rgba(25,127,255,.03) 100%),var(--page)}
+.stars{position:absolute;left:0;top:0;width:1px;height:1px;border-radius:50%;background:#fff}
+
+/* nav */
+.nav{left:247px;top:3px;width:678px;height:64px;border-radius:32px;z-index:400;background:rgba(255,255,255,.008);border:1px solid rgba(255,255,255,.105);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+.logo{position:absolute;left:16px;top:9px;height:44px;display:block}
+.logo img{height:44px;width:auto;display:block}
+.links{position:absolute;left:146px;top:0;height:62px;display:flex;align-items:center;gap:19px}
+.links a{font-size:12.5px;color:rgba(255,255,255,.92);white-space:nowrap;transition:opacity .25s}
+.links a:hover{opacity:.65}
+.links a:focus-visible,.btn:focus-visible,.wa:focus-visible,.logo:focus-visible{outline:2px solid rgba(120,225,255,.8);outline-offset:3px;border-radius:8px}
+
+/* PIXEL CONTRACT B — glow button */
+.btn{display:grid;place-items:center;color:#fff;position:relative;overflow:hidden;
+  background:linear-gradient(to top,#9ad9ec 1px,#89dff0 2px,#79e0f1 3px,#61daef 4px,#3ec8e4 5px,#14a8c6 6px,#0596b3 7px,#038aa8 8px,#047796 9px,#006180 10px,#025066 12px,#0a4f5e 13px,#04465a 14px,#073746 16px,#0a2a37 18px,#0d212e 20px,#0f1824 24px,#0a121e 30px,#0a111d 34px,#0a111d 100%);
+  box-shadow:inset 0 3px 3px -2px rgba(180,228,255,.10),inset 1px 0 0 rgba(255,255,255,.09),inset -1px 0 0 rgba(255,255,255,.09),var(--hair,0 1px 0 rgba(152,218,234,.38)),1px 0 0 rgba(152,218,234,.17),-1px 0 0 rgba(152,218,234,.17),0 0 8px rgba(60,190,235,.10),0 2px 5px -3px rgba(90,220,255,.45);
+  transition:transform .25s,box-shadow .25s,filter .25s}
+.btn::before{content:"";position:absolute;left:22%;right:38%;top:.8px;height:1.9px;z-index:1;filter:blur(.55px);background:linear-gradient(90deg,rgba(120,225,255,0) 0%,rgba(120,225,255,.58) 34%,rgba(160,240,255,.74) 50%,rgba(120,225,255,.58) 66%,rgba(120,225,255,0) 100%)}
+.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:1;
+  background:linear-gradient(90deg,rgba(200,245,255,.70),rgba(200,245,255,0) 13px),linear-gradient(270deg,rgba(200,245,255,.70),rgba(200,245,255,0) 13px);
+  -webkit-mask:linear-gradient(to top,#000 0,#000 6px,rgba(0,0,0,.40) 12px,rgba(0,0,0,.15) 18px,rgba(0,0,0,.09) 24px,rgba(0,0,0,.02) 30px,rgba(0,0,0,.02) 100%);
+  mask:linear-gradient(to top,#000 0,#000 6px,rgba(0,0,0,.40) 12px,rgba(0,0,0,.15) 18px,rgba(0,0,0,.09) 24px,rgba(0,0,0,.02) 30px,rgba(0,0,0,.02) 100%)}
+.btn span{position:relative;z-index:2;display:block;line-height:1;text-shadow:0 1px 2px rgba(0,20,30,.5)}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.12);box-shadow:inset 0 1px 0 rgba(200,245,255,.6),inset 1px 0 0 rgba(170,225,255,.35),inset -1px 0 0 rgba(170,225,255,.35),0 6px 22px rgba(20,180,225,.55)}
+.nav .btn{position:absolute;left:522px;top:10.5px;width:140px;height:39.5px;border-radius:14px;font-size:13.5px;font-weight:500;letter-spacing:-.005em}
+.cta2{left:516px;top:349px;width:140px;height:54.5px;--hair:0 0 0 transparent;border-radius:13px;font-size:16px;font-weight:500;letter-spacing:-.01em;z-index:300}
+.cta2::before{display:none}
+
+/* PIXEL CONTRACT A — badge */
+.badge{left:431px;top:95px;width:310px;height:39px;border-radius:12px;z-index:300;border:1px solid rgba(255,255,255,.115);
+  background:linear-gradient(to top,rgba(190,225,255,.175) 0px,rgba(190,225,255,.128) 2px,rgba(190,225,255,.075) 4px,rgba(190,225,255,.026) 6px,rgba(255,255,255,.012) 9px,rgba(255,255,255,.012) 100%);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.035)}
+.badge i{position:absolute;left:4px;top:4px;width:29px;height:29px;border-radius:8px;display:grid;place-items:center;
+  background:linear-gradient(to top,#46afc8 0px,#35abc7 2px,#0b859d 4px,#026c84 6px,#004e66 8px,#053f58 10px,#012c3d 12px,#031a2a 14px,#061125 16px,#090f25 19px,#090c1c 23px,#060d16 29px);
+  box-shadow:inset 1px 0 0 rgba(150,220,250,.40),inset -1px 0 0 rgba(150,220,250,.52),0 0 6px rgba(60,190,230,.20),0 3px 8px -5px rgba(90,220,255,.6)}
+.badge i svg{width:14px;height:16px;position:relative;top:-1px}
+.badge b{position:absolute;left:45px;top:0;height:39px;display:flex;align-items:center;font-size:12.6px;font-weight:400;color:rgba(255,255,255,.94);white-space:nowrap;padding-top:1.5px}
+
+/* hero type */
+.h1{left:586px;transform:translateX(-50%);white-space:nowrap;line-height:1;font-weight:900;font-size:52px;letter-spacing:-.004em;word-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 0 34px rgba(130,180,255,.22);z-index:300}
+#h1a{top:160px}#h1b{top:214px}
+#h1b em{font-style:normal;background:linear-gradient(90deg,#5fe9f5,#3d8bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{left:586px;transform:translateX(-50%);white-space:nowrap;line-height:1;font-size:13.2px;color:var(--sub);z-index:300}
+#sub1{top:290px}#sub2{top:309px}
+.sub b{font-weight:600;color:#fff}
+
+/* 3D ring */
+.showcase{left:0;top:0;width:1172px;height:0}
+.ring{position:absolute;left:0;top:0;width:1172px;height:657px;z-index:5;perspective:891px;perspective-origin:586px 918px;transform-style:preserve-3d;pointer-events:none}
+.card{position:absolute;left:586px;top:616px;width:130px;height:300px;margin:-150px 0 0 -65px;border-radius:12px;overflow:hidden;background:var(--card);box-shadow:0 24px 46px rgba(0,0,0,.6),0 3px 8px rgba(0,0,0,.5);backface-visibility:hidden;will-change:transform}
+.card .edge{position:absolute;inset:0;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15),inset 0 16px 30px rgba(255,255,255,.05)}
+.card.broken img{display:none}
+.cv{position:absolute;left:0;right:0;padding:0 10px}
+.fill{position:absolute;inset:0}
+.ph{position:absolute;left:0;right:0;overflow:hidden;background:linear-gradient(155deg,#2b3b50,#131c28 60%,#1d1526)}
+.phf{top:0;bottom:0}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.t-big{font-weight:900;text-transform:uppercase;line-height:.96;letter-spacing:-.015em;white-space:nowrap;transform:scaleX(.875);transform-origin:left center}
+.t-serif{font-family:var(--serif);line-height:1.02;letter-spacing:.01em;white-space:nowrap}
+.kick{font-size:4.6px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.chip{display:inline-block;padding:4px 10px;border-radius:20px;font-size:4.8px;font-weight:600;letter-spacing:.05em}
+
+/* browser mock */
+.browser{position:absolute;left:165px;top:558px;width:842px;height:calc(99px + var(--fill,0px));border-radius:28px 28px 0 0;overflow:hidden;z-index:100;box-shadow:0 -14px 44px rgba(0,0,0,.55)}
+.browser::before{content:"";position:absolute;left:0;right:0;top:42px;bottom:0;background:rgba(20,20,26,.82)}
+.bar{position:absolute;left:0;top:0;width:100%;height:42px;background:linear-gradient(180deg,rgba(20,24,48,.48),rgba(15,19,38,.58));-webkit-backdrop-filter:blur(6px) saturate(112%);backdrop-filter:blur(6px) saturate(112%)}
+.dots{position:absolute;left:27px;top:16px;display:flex;gap:2.6px}
+.dots i{width:7.6px;height:7.6px;border-radius:50%}
+.omni{position:absolute;left:246px;top:7px;width:336px;height:26px;border-radius:5px;background:rgba(9,13,26,.93);box-shadow:inset 0 0 0 1px rgba(255,255,255,.045);display:flex;align-items:center;justify-content:center;gap:6px}
+.omni svg{width:9px;height:9px;opacity:.72}
+.omni span{font-size:9.5px;color:rgba(255,255,255,.72)}
+.tools{position:absolute;right:27px;top:14px;display:flex;gap:4px;opacity:.9}
+.tools svg{width:11px;height:12px}
+.page{position:absolute;left:7px;right:6px;top:42px;bottom:0;background:#fff;color:#111;overflow:hidden;border-radius:10px 10px 0 0}
+.ann{position:absolute;left:0;top:0;width:100%;height:16px;background:#0E3B4A;display:grid;place-items:center;border-radius:10px 10px 0 0}
+.ann span{font-size:5px;letter-spacing:.06em;color:#d9f3f7}
+.shoplogo{position:absolute;left:50%;transform:translateX(-50%);top:24px;text-align:center}
+.shoplogo em{display:block;font-family:var(--serif);font-style:normal;font-weight:600;font-size:15px;letter-spacing:.06em;line-height:1;color:#0E3B4A}
+.shoplogo i{display:block;font-style:normal;font-size:5px;letter-spacing:.3em;color:#3a5560;margin-top:3px}
+.shopicons{position:absolute;right:100px;top:33px;display:flex;gap:5px;opacity:.85}
+.shopicons svg{width:7px;height:7px}
+.pagebody{position:absolute;left:0;right:0;top:62px;bottom:0;background:#fff;overflow:hidden}
+.pghero{position:relative;margin:0 26px;height:158px;border-radius:7px;overflow:hidden;background:linear-gradient(120deg,#d7ecef,#a9cdd4)}
+.pghero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pghero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,30,38,.72) 0%,rgba(8,30,38,.35) 46%,rgba(8,30,38,0) 72%)}
+.pghero .copy{position:absolute;left:22px;top:50%;transform:translateY(-50%);color:#fff}
+.pghero .copy u{display:block;font-size:4.6px;letter-spacing:.26em;text-transform:uppercase;opacity:.9;text-decoration:none}
+.pghero .copy em{display:block;font-family:var(--serif);font-style:normal;font-weight:600;font-size:15px;line-height:1.12;margin-top:6px}
+.pghero .copy i{display:inline-block;font-style:normal;margin-top:10px;padding:5px 13px;border-radius:20px;background:#fff;color:#0E3B4A;font-size:5.2px;font-weight:600;letter-spacing:.06em}
+.pgsec{display:flex;align-items:baseline;justify-content:space-between;margin:16px 26px 9px}
+.pgsec b{font-family:var(--serif);font-weight:600;font-size:9px;color:#17181c}
+.pgsec u{font-size:4.6px;letter-spacing:.14em;color:#8a8a8a;text-transform:uppercase;text-decoration:none}
+.pggrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 26px}
+.pgcard .ic{position:relative;height:0;padding-bottom:70%;border-radius:6px;background:linear-gradient(150deg,#e6f4f6,#cfe7eb)}
+.pgcard .ic svg{position:absolute;left:50%;top:50%;width:24%;height:auto;transform:translate(-50%,-50%)}
+.pgcard .tag{position:absolute;left:6px;top:6px;padding:2px 5px;border-radius:3px;background:#0E3B4A;color:#fff;font-size:3.8px;font-weight:600;letter-spacing:.1em}
+.pgcard b{display:block;margin-top:6px;font-size:5.4px;font-weight:600;color:#17181c}
+.pgcard i{display:block;font-style:normal;margin-top:2px;font-size:4.6px;color:#6f7b80}
+.pgcard s{display:block;margin-top:3px;font-size:5px;font-weight:700;color:#0E7C90;text-decoration:none}
+.pgstrip{display:flex;justify-content:space-between;margin:16px 26px 0;padding:9px 0;border-top:1px solid #e3eef0;border-bottom:1px solid #e3eef0}
+.pgstrip span{font-size:4.4px;letter-spacing:.12em;color:#5d7177;text-transform:uppercase}
+
+/* WhatsApp */
+.wa{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:300;box-shadow:0 8px 20px rgba(0,0,0,.5)}
+.wa svg{width:31px;height:31px}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(37,211,102,.5);animation:pulse 2.8s ease-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.75}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}
+
+/* intro resting states — individual translate/scale so they compose with the fitter's and ring's transform */
+html.intro .nav{opacity:0;translate:0 -9px}
+html.intro .badge{opacity:0;translate:0 11px;scale:.985}
+html.intro .h1{opacity:0;translate:0 15px;clip-path:inset(100% 0 -30% 0)}
+html.intro .sub{opacity:0;translate:0 10px}
+html.intro .cta2{opacity:0;translate:0 13px;scale:.985}
+html.intro .ring{opacity:0;translate:0 18px;scale:.99}
+html.intro .browser{opacity:0;translate:0 26px}
+html.intro .wa{opacity:0;scale:.88}
+
+/* shared narrow nav */
+@media (max-width:1080px){
+  .burger{display:grid;place-content:center;gap:4px;position:absolute;right:12px;top:11px;width:42px;height:42px;border:0;border-radius:14px;background:transparent;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .burger span{display:block;width:19px;height:1.6px;border-radius:2px;background:rgba(255,255,255,.92);transition:transform .28s cubic-bezier(.4,0,.2,1),opacity .18s}
+  .burger:focus-visible{outline:2px solid rgba(120,225,255,.7);outline-offset:2px}
+  .nav.open .burger span:nth-child(1){transform:translateY(5.6px) rotate(45deg)}
+  .nav.open .burger span:nth-child(2){opacity:0}
+  .nav.open .burger span:nth-child(3){transform:translateY(-5.6px) rotate(-45deg)}
+  .navmenu{display:block;position:absolute;left:0;right:0;top:74px;padding:12px;border-radius:22px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(11,15,22,.985),rgba(7,10,16,.99));box-shadow:0 26px 60px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .24s ease,transform .28s cubic-bezier(.4,0,.2,1),visibility .28s}
+  .nav.open .navmenu{opacity:1;visibility:visible;transform:none}
+  .links{position:static;flex-direction:column;align-items:stretch;height:auto;gap:2px}
+  .links a{font-size:15px;padding:11px 14px;border-radius:12px}
+  .nav .btn{position:static;width:100%;height:46px;margin-top:10px;font-size:15px}
+  .nav{left:286px;width:600px}
+}
+@media (hover:hover) and (max-width:1080px){.burger:hover span{background:#fff}.links a:hover{background:rgba(255,255,255,.055);opacity:1}}
+
+/* phone: real flow column */
+@media (max-width:700px){
+  .stage{height:auto;min-height:100svh}
+  .canvas{min-height:100svh;height:auto!important;padding-bottom:0}
+  .canvas{position:relative;left:auto;top:auto;width:100%;height:100%;transform:none;display:flex;flex-direction:column;align-items:center;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .canvas>*{position:static}
+  .bg{position:absolute}
+  .stack{display:contents}
+  .stack>*{position:relative}
+  .nav{position:relative;left:auto;top:auto;width:100%;max-width:500px;height:58px;margin-top:clamp(10px,1.5vh,15px);flex:0 0 auto}
+  .logo{left:12px;top:8px;height:40px}.logo img{height:40px}
+  .burger{right:8px;top:7px;width:44px;height:44px}
+  .navmenu{top:68px}
+  .badge{left:auto;top:auto;margin-top:clamp(16px,2.6vh,26px);width:auto;max-width:100%;height:36px;flex:0 0 auto;border-radius:18px}
+  .badge b{position:relative;left:auto;top:auto;height:36px;padding:0 15px 0 42px;font-size:12.5px}
+  .badge i{width:28px;height:28px}
+  .h1{left:auto;top:auto!important;transform:none;white-space:normal;text-align:center;font-size:clamp(29px,8.4vw,36px);line-height:1.06;letter-spacing:-.01em;max-width:9em}
+  #h1a{margin-top:clamp(12px,2.2vh,20px)}
+  .sub{left:auto;top:auto!important;transform:none;white-space:normal;text-align:center;font-size:clamp(14px,3.9vw,15.5px);line-height:1.5;max-width:340px}
+  #sub1{margin-top:clamp(10px,1.8vh,16px)}
+  #sub2{display:none}
+  .cta2{left:auto;top:auto;margin-top:clamp(16px,2.6vh,26px);flex:0 0 auto;width:auto;min-width:158px;height:52px;padding:0 26px;font-size:16px}
+  .showcase{position:relative;flex:1 1 auto;width:100%;height:auto;min-height:540px;order:1;margin-top:24px}
+  .ring{left:50%;margin-left:-586px;top:-446px;transform-origin:586px 466px;transform:scale(1.02)}
+  .browser{position:absolute;left:50%;transform:translateX(-50%);top:212px;bottom:0;width:calc(100% + 40px);height:auto;border-radius:22px 22px 0 0}
+  .browser .bar{height:36px}
+  .omni{left:50%;transform:translateX(-50%);width:58%;height:24px;top:6px}
+  .omni span{font-size:9px}.dots{top:14px}.tools{display:none}
+  .ann{height:15px}.ann span{font-size:6px}.page{top:36px}
+  .shoplogo em{font-size:16px}.shopicons{right:18px}
+  .pagebody{top:56px}
+  .pghero{margin:0 18px;height:122px;border-radius:10px}
+  .pghero .copy{left:18px}
+  .pghero .copy u{font-size:7.5px;letter-spacing:.2em}
+  .pghero .copy em{font-size:20px;margin-top:5px}
+  .pghero .copy i{font-size:8.5px;padding:6px 13px;margin-top:8px}
+  .pgsec{margin:16px 18px 10px}.pgsec b{font-size:14px}.pgsec u{font-size:8px}
+  .pggrid{grid-template-columns:repeat(2,minmax(0,1fr));margin:0 18px}
+  .pgcard .tag{font-size:7px;padding:3px 7px}
+  .pgcard b{font-size:10.5px;margin-top:7px}.pgcard i{font-size:8.5px}.pgcard s{font-size:10px}
+  .pgstrip{margin:16px 18px 0;flex-wrap:wrap;gap:5px 16px}.pgstrip span{font-size:8px}
+  .wa{width:54px;height:54px;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+  html.intro .nav,html.intro .badge,html.intro .h1,html.intro .sub,html.intro .cta2,html.intro .ring,html.intro .browser,html.intro .wa{opacity:1;translate:none;scale:none;clip-path:none}
+  .wa::after{animation:none}.navmenu,.burger span{transition:none}
+}
+
+/* AI chat demo inside the browser mock */
+.chatapp{display:grid;grid-template-columns:150px minmax(0,1fr) 170px;background:#f4f7fa;font-size:7px;color:#17202b}
+.ch-h{font-size:6.4px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#5d6b7a;padding:10px 10px 6px;display:flex;justify-content:space-between;align-items:center}
+.live{color:#0f9f6e;letter-spacing:0;text-transform:none}
+.convs{background:#fff;border-right:1px solid #e3e9ef}
+.cv-i{display:flex;gap:6px;align-items:center;padding:6px 10px}
+.cv-i.on{background:#eef4ff}
+.cv-i i,.ch-top i{width:16px;height:16px;border-radius:50%;color:#fff;font-style:normal;font-size:7px;font-weight:600;display:grid;place-items:center;flex-shrink:0}
+.cv-i b,.ch-top b{display:block;font-size:6.8px;font-weight:600}
+.cv-i span,.ch-top span{display:block;font-size:5.6px;color:#6b7785;margin-top:1px}
+.chat{display:flex;flex-direction:column;min-width:0;background:#e9eef2}
+.ch-top{display:flex;gap:6px;align-items:center;padding:7px 12px;background:#fff;border-bottom:1px solid #e3e9ef}
+.msgs{display:flex;flex-direction:column;gap:5px;padding:9px 14px}
+.m{max-width:72%;padding:5px 8px;border-radius:9px;line-height:1.45;font-size:6.6px;animation:pop .32s cubic-bezier(.2,.8,.2,1) both}
+.m.in{align-self:flex-start;background:#fff;border-bottom-left-radius:2px}
+.m.out{align-self:flex-end;background:#0B4DDB;color:#fff;border-bottom-right-radius:2px}
+.m.out small{display:block;font-size:4.8px;opacity:.75;margin-bottom:1px;letter-spacing:.06em}
+.m.typing{display:flex;gap:2.5px;padding:7px 9px}
+.m.typing span{width:3.5px;height:3.5px;border-radius:50%;background:#8a96a3;animation:blink 1s infinite}
+.m.typing span:nth-child(2){animation-delay:.15s}.m.typing span:nth-child(3){animation-delay:.3s}
+@keyframes pop{from{opacity:0;transform:translateY(5px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes blink{0%,80%,100%{opacity:.3}40%{opacity:1}}
+.lead{background:#fff;border-left:1px solid #e3e9ef}
+.lead dl{padding:0 10px}
+.lead dl div{display:flex;justify-content:space-between;gap:6px;padding:5px 0;border-bottom:1px solid #eef2f6}
+.lead dt{color:#6b7785;font-size:6px}
+.lead dd{font-weight:600;font-size:6.2px;text-align:right;transition:color .3s}
+.lead dd.new{color:#0B4DDB}
+.st{display:inline-block;padding:1.5px 5px;border-radius:6px;background:#fff4d6;color:#8a5a00;font-size:5.4px}
+.st.ok{background:#d9f7ea;color:#05704a}
+@media (max-width:700px){
+  .chatapp{grid-template-columns:minmax(0,1fr)}
+  .convs{display:none}
+  .lead{display:none}
+  .chat{font-size:11px}
+  .ch-top{padding:9px 14px}.ch-top i{width:24px;height:24px;font-size:10px}.ch-top b{font-size:11px}.ch-top span{font-size:9px}
+  .msgs{gap:7px;padding:12px 14px}
+  .m{font-size:11.5px;padding:7px 11px;border-radius:12px}.m.out small{font-size:8px}
+  .m.typing span{width:5px;height:5px}
+}
+@media (prefers-reduced-motion:reduce){.m,.m.typing span{animation:none}}
+
+
+/* shared section basics */
+.sec{position:relative;padding-block:clamp(56px,8vw,110px);padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#7fe6f5}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+.h2{margin-top:16px;font-weight:800;font-size:clamp(30px,4.6vw,54px);line-height:1.04;letter-spacing:-.025em;text-wrap:balance}
+.h2 em{font-family:var(--serif);font-style:italic;font-weight:600;color:#7fe6f5}
+.lede{max-width:580px;color:var(--sub);font-size:clamp(15px,1.4vw,18px);line-height:1.7}
+.glass{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.09);border-radius:22px}
+.link{color:#7fe6f5;font-weight:600;font-size:15px}
+.link:hover{color:#fff}
+.link:focus-visible,.sbtn:focus-visible,.sub-links a:focus-visible,.sub-nav .btn:focus-visible,.lg:focus-visible{outline:2px solid #7fe6f5;outline-offset:3px;border-radius:10px}
+.sbtn{display:inline-grid;place-items:center;height:52px;padding:0 26px;border-radius:13px;font-size:16px;font-weight:500;--hair:0 0 0 transparent}
+.sbtn::before{display:none}
+.note{margin-top:18px;font-size:13px;color:#7d8693}
+footer{border-top:1px solid rgba(255,255,255,.08);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(90px,env(safe-area-inset-right,0px))}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:#7d8693}
+footer img{height:34px;width:auto;display:block}
+/* ===== multi-page shell ===== */
+[hidden]{display:none!important}
+.sub-head{position:fixed;top:0;left:0;right:0;z-index:500;padding-top:calc(12px + env(safe-area-inset-top,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));pointer-events:none;transition:opacity .4s,transform .4s}
+.sub-head.off{opacity:0;transform:translateY(-12px);visibility:hidden}
+.sub-nav{pointer-events:auto;max-width:1060px;margin:0 auto;height:62px;border-radius:31px;display:flex;align-items:center;gap:14px;padding:0 10px 0 18px;background:rgba(6,9,16,.62);border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%)}
+.sub-nav .lg img{height:38px;width:auto;display:block}
+.sub-links{display:flex;gap:4px;margin:0 auto;overflow-x:auto;scrollbar-width:none;min-width:0}
+.sub-links::-webkit-scrollbar{display:none}
+.sub-links a{white-space:nowrap;font-size:14px;padding:9px 14px;border-radius:20px;color:rgba(255,255,255,.78);transition:background .25s,color .25s}
+.sub-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.sub-links a[aria-current="page"]{color:#020204;background:#fff;font-weight:600}
+.sub-nav .btn{height:42px;padding:0 18px;border-radius:14px;font-size:14px;font-weight:500;flex-shrink:0}
+.links a[aria-current="page"]{color:#7fe6f5}
+@media (max-width:760px){.sub-nav{height:auto;flex-wrap:wrap;padding:8px 10px;border-radius:22px;row-gap:6px}.sub-nav .lg{order:1}.sub-nav .btn{order:2;margin-left:auto;height:40px}.sub-links{order:3;width:100%;margin:0}}
+
+/* page transition curtain: a sweep that echoes the logo's arrow */
+.curtain{position:fixed;inset:0;z-index:900;pointer-events:none;visibility:hidden}
+.curtain i{position:absolute;inset:0;background:#020204;transform:scaleX(0);transform-origin:left}
+.curtain b{position:absolute;left:0;top:50%;height:2px;width:40vw;background:linear-gradient(90deg,transparent,#12E3F0,#8B5CF6,#fff);box-shadow:0 0 18px #12E3F0;transform:translateX(-50vw)}
+
+/* sub-page hero */
+.phero{position:relative;overflow:hidden;padding-top:calc(150px + env(safe-area-inset-top,0px));padding-bottom:clamp(48px,7vw,90px);padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.phero .arc{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
+.phero .arc path{fill:none;stroke-linecap:round}
+.phero .wrap{position:relative}
+.phero h1{margin-top:18px;font-weight:900;text-transform:uppercase;font-size:clamp(40px,8vw,104px);line-height:.95;letter-spacing:-.03em;text-wrap:balance}
+.phero h1 em{font-family:var(--serif);font-style:italic;font-weight:600;text-transform:none;letter-spacing:-.01em;background:linear-gradient(90deg,#5fe9f5,#3d8bff);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.phero .lede{margin-top:22px}
+.line-wipe{display:block;overflow:hidden;padding-bottom:.06em}
+.line-wipe>span{display:block}
+.view.in .line-wipe>span{animation:wipe 1s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0ms)}
+@keyframes wipe{from{transform:translateY(105%)}to{transform:none}}
+.view.in [data-in]{animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0ms)}
+@keyframes rise{from{opacity:0;transform:translateY(28px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.view.in .arc .draw{stroke-dasharray:2400;animation:draw 2s .2s cubic-bezier(.6,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:2400}to{stroke-dashoffset:0}}
+
+/* soluções: alternating rows with live visuals */
+.srow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,6vw,80px);border-top:1px solid rgba(255,255,255,.07)}
+.srow:nth-child(even) .viz{order:-1}
+.srow .num{font-family:var(--serif);font-style:italic;font-size:22px;color:#7fe6f5}
+.srow h2{margin-top:10px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+.srow p{margin-top:14px;color:var(--sub);line-height:1.7;max-width:480px}
+.srow ul{margin-top:20px;list-style:none;display:grid;gap:10px}
+.srow li{display:flex;gap:10px;align-items:flex-start;color:#dfe5ec;line-height:1.5}
+.srow li::before{content:"";width:16px;height:16px;flex-shrink:0;margin-top:3px;border-radius:5px;background:linear-gradient(135deg,#12E3F0,#1D5BFF)}
+.srow .link{display:inline-block;margin-top:24px}
+.viz{position:relative;aspect-ratio:16/11;max-width:100%;border-radius:22px;overflow:hidden;background:radial-gradient(120% 90% at 30% 10%,#10213f,#060912 60%);border:1px solid rgba(255,255,255,.09)}
+/* viz 1: a site assembling itself */
+.v-site{position:absolute;left:8%;right:8%;top:12%;bottom:0;border-radius:12px 12px 0 0;background:#f6f8fb;overflow:hidden;box-shadow:0 -10px 40px rgba(0,0,0,.4)}
+.v-site .tb{height:22px;background:#e3e8ef;display:flex;gap:5px;align-items:center;padding-left:10px}
+.v-site .tb i{width:7px;height:7px;border-radius:50%;background:#c3cbd6}
+.v-site .blk{position:absolute;border-radius:6px;opacity:0}
+.view.in .v-site .blk{animation:build 6s infinite;animation-delay:var(--d)}
+@keyframes build{0%,4%{opacity:0;transform:translateY(10px) scale(.96)}12%,82%{opacity:1;transform:none}92%,100%{opacity:0}}
+/* viz 2: a week filling with bookings */
+.v-cal{position:absolute;inset:9%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.v-cal .day{display:flex;flex-direction:column;gap:6px}
+.v-cal .day>b{font-size:11px;font-weight:600;color:#9fb0c6;letter-spacing:.1em;text-align:center}
+.v-cal .slot{height:30px;border-radius:7px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.1);position:relative;overflow:hidden}
+.v-cal .slot u{position:absolute;inset:0;text-decoration:none;display:flex;align-items:center;padding:0 7px;font-size:10px;font-weight:600;color:#04101f;background:linear-gradient(90deg,#5fe9f5,#3d8bff);transform:scaleX(0);transform-origin:left;white-space:nowrap;overflow:hidden}
+.view.in .v-cal .slot u{animation:book 7s infinite;animation-delay:var(--d)}
+@keyframes book{0%,6%{transform:scaleX(0)}12%,86%{transform:scaleX(1)}94%,100%{transform:scaleX(0)}}
+/* viz 3: phone with the assistant answering */
+.v-phone{position:absolute;left:50%;top:8%;bottom:-10%;width:min(250px,56%);transform:translateX(-50%);border-radius:30px;background:#0b141a;border:6px solid #1c2530;box-shadow:0 30px 60px rgba(0,0,0,.5);padding:44px 12px 12px;display:flex;flex-direction:column;gap:8px}
+.v-phone::before{content:"Assistente BGTech · online";position:absolute;left:0;right:0;top:0;height:36px;display:grid;place-items:center;font-size:10.5px;color:#9fefff;background:#111b22;border-radius:22px 22px 0 0}
+.v-phone p{margin:0;max-width:85%;padding:7px 10px;border-radius:12px;font-size:11.5px;line-height:1.45;color:#e9edef;opacity:0}
+.v-phone p.i{background:#202c33;align-self:flex-start;border-bottom-left-radius:3px}
+.v-phone p.o{background:#005c4b;align-self:flex-end;border-bottom-right-radius:3px}
+.view.in .v-phone p{animation:msg 9s infinite;animation-delay:var(--d)}
+@keyframes msg{0%,3%{opacity:0;transform:translateY(8px)}8%,88%{opacity:1;transform:none}95%,100%{opacity:0}}
+
+/* modelos */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chips button{font:inherit;font-size:14px;color:#dfe5ec;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:10px 18px;min-height:44px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.chips button:hover{border-color:rgba(127,230,245,.5)}
+.chips button[aria-pressed="true"]{background:#fff;color:#020204;border-color:#fff;font-weight:600}
+.chips button:focus-visible{outline:2px solid #7fe6f5;outline-offset:3px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:18px;perspective:1200px}
+.mcard{position:relative;display:block;aspect-ratio:4/3.2;max-width:100%;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.09);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .4s,filter .4s}
+.mcard.dim{opacity:.18;filter:grayscale(1);pointer-events:none}
+.mcard img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.mcard:hover img{transform:scale(1.05)}
+.mcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,2,4,0) 40%,rgba(2,2,4,.92))}
+.mcard .shine{position:absolute;inset:0;z-index:1;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(127,230,245,.18),transparent 45%);opacity:0;transition:opacity .3s}
+.mcard:hover .shine{opacity:1}
+.mcard .meta{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;transform:translateZ(30px)}
+.mcard small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7fe6f5}
+.mcard b{display:block;font-family:var(--serif);font-weight:600;font-size:24px;margin-top:4px}
+.mcard .go{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;flex-shrink:0;transition:background .3s,color .3s}
+.mcard:hover .go{background:#fff;color:#020204}
+.mcard:focus-visible{outline:2px solid #7fe6f5;outline-offset:4px}
+
+/* clientes */
+.case{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(32px,5vw,64px)}
+.case+.case{border-top:1px solid rgba(255,255,255,.07)}
+.case:nth-child(even) .media{order:2}
+.case .media{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);aspect-ratio:16/10;max-width:100%}
+.case .media img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:object-position 6s ease}
+.case .media:hover img{object-position:bottom}
+.case small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#7fe6f5}
+.case h2{margin-top:10px;font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.05}
+.case p{margin-top:14px;color:var(--sub);line-height:1.7}
+.case .link{display:inline-block;margin-top:20px}
+.ig{display:grid;place-items:center;background:radial-gradient(90% 90% at 30% 20%,#2a1b5c,#0b0f1e 70%)}
+.ig .count{font-size:clamp(64px,10vw,128px);font-weight:900;letter-spacing:-.05em;line-height:1;background:linear-gradient(90deg,#5fe9f5,#8B5CF6);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.ig span{display:block;text-align:center;color:var(--sub);margin-top:8px}
+
+/* sobre */
+.about{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.about .photo{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.about .photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.view.in .about .photo{animation:unveil 1.3s .25s cubic-bezier(.7,0,.2,1) both}
+@keyframes unveil{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+.view.in .about .photo img{animation:settle 1.8s .25s cubic-bezier(.16,1,.3,1) both}
+@keyframes settle{from{transform:scale(1.25)}to{transform:none}}
+.quote{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,30px);line-height:1.3}
+.facts{margin-top:30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.facts div{padding:16px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.facts b{display:block;font-size:26px;font-weight:800;color:#7fe6f5;font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--sub);line-height:1.4}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.timeline .rail{position:absolute;left:0;right:0;top:21px;height:2px;background:rgba(255,255,255,.08)}
+.timeline .rail i{position:absolute;inset:0;background:linear-gradient(90deg,#12E3F0,#1D5BFF,#8B5CF6);transform:scaleX(0);transform-origin:left}
+.view.in .timeline .rail i{animation:fillx 1.8s .5s cubic-bezier(.6,0,.2,1) both}
+@keyframes fillx{to{transform:scaleX(1)}}
+.tstep .dot{position:relative;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#0a111d;border:1px solid rgba(127,230,245,.4);font-weight:700;color:#7fe6f5}
+.view.in .tstep .dot{animation:lit .5s both;animation-delay:var(--d)}
+@keyframes lit{from{box-shadow:0 0 0 0 rgba(18,227,240,0);background:#0a111d}50%{box-shadow:0 0 0 10px rgba(18,227,240,.15)}to{background:#0f2a3a;box-shadow:0 0 24px rgba(18,227,240,.35)}}
+.tstep h3{margin-top:18px;font-size:24px;font-weight:700}
+.tstep p{margin-top:8px;color:var(--sub);line-height:1.65}
+
+/* contato */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,64px);align-items:start}
+.form{padding:clamp(22px,3vw,34px);display:grid;gap:18px}
+.field{display:grid;gap:7px}
+.field label,.field legend{font-size:13px;font-weight:600;color:#cfd6df}
+.field input,.field textarea{font:inherit;font-size:16px;color:#fff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 14px;transition:border-color .25s,background .25s}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:#7fe6f5;background:rgba(127,230,245,.05)}
+fieldset.field{border:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:21px;border:1px solid rgba(255,255,255,.14);font-size:14px;font-weight:500;color:#dfe5ec;transition:all .25s}
+.opts input:checked+span{background:#fff;color:#020204;border-color:#fff}
+.opts input:focus-visible+span{outline:2px solid #7fe6f5;outline-offset:2px}
+.form .btn{height:54px;border-radius:13px;font-size:16px;font-weight:500;--hair:0 0 0 transparent;border:0;cursor:pointer;font-family:inherit}
+.form .btn::before{display:none}
+.err{font-size:13px;color:#ffb4a8;min-height:1em}
+.done{padding:clamp(26px,3vw,38px);text-align:center;display:grid;gap:14px;justify-items:center}
+.done .ok{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#12E3F0,#1D5BFF)}
+.done .ok svg{width:34px;height:34px}
+.done .ok path{stroke-dasharray:40;stroke-dashoffset:40;animation:tick .6s .2s ease forwards}
+@keyframes tick{to{stroke-dashoffset:0}}
+.done h3{font-size:26px}
+.done p{color:var(--sub);line-height:1.6;max-width:420px}
+.direct{display:grid;gap:14px;margin-top:28px}
+.direct div{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.direct span{color:var(--sub);font-size:14px}
+.direct b{user-select:all;font-weight:600}
+
+/* page footer link to the next page */
+.next{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:clamp(28px,4vw,44px) clamp(22px,3vw,38px);border-radius:24px;margin-top:clamp(32px,5vw,60px);transition:border-color .3s}
+.next:hover{border-color:rgba(127,230,245,.45)}
+.next small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#7fe6f5}
+.next b{display:block;margin-top:6px;font-size:clamp(24px,3.4vw,40px);font-weight:800;letter-spacing:-.02em}
+.next .go{width:58px;height:58px;border-radius:50%;background:#fff;color:#020204;display:grid;place-items:center;font-size:22px;flex-shrink:0;transition:transform .35s}
+.next:hover .go{transform:rotate(-45deg)}
+.next:focus-visible{outline:2px solid #7fe6f5;outline-offset:4px}
+
+@media (max-width:860px){.srow,.case,.about,.contact{grid-template-columns:minmax(0,1fr)}.srow:nth-child(even) .viz,.case:nth-child(even) .media{order:0}.about .photo{max-width:420px}}
+@media (max-width:620px){.timeline{grid-template-columns:minmax(0,1fr)}.timeline .rail{display:none}.facts{grid-template-columns:minmax(0,1fr)}.v-cal .slot u{font-size:8.5px;padding:0 4px}}
+@media (prefers-reduced-motion:reduce){
+  .view.in [data-in],.view.in .line-wipe>span,.view.in .arc .draw,.view.in .about .photo,.view.in .about .photo img,.view.in .timeline .rail i,.view.in .tstep .dot{animation:none}
+  .view.in .timeline .rail i{transform:none}
+  .view.in .v-site .blk,.view.in .v-cal .slot u,.view.in .v-phone p{animation:none;opacity:1;transform:none}
+  .curtain{display:none}
+}
+
+
+.igp{width:min(100%,420px);padding:clamp(18px,3vw,28px);border-radius:20px;background:rgba(5,7,13,.72);border:1px solid rgba(255,255,255,.12);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.igp-top{display:flex;align-items:center;gap:clamp(16px,3vw,28px)}
+.igp-av{width:clamp(76px,9vw,96px);aspect-ratio:1;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,#f9ce34,#ee2a7b,#6228d7,#f9ce34);flex-shrink:0}
+.igp-av img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #05070d;display:block}
+.igp-stats{display:flex;gap:clamp(18px,3vw,30px)}
+.igp-stats b{display:block;font-size:clamp(22px,2.6vw,30px);font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.igp-stats b.count{font-size:clamp(22px,2.6vw,30px);background:linear-gradient(90deg,#5fe9f5,#8B5CF6);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:0}
+.igp-stats span{font-size:13px;color:var(--sub)}
+.igp-user{margin-top:16px;font-weight:700;font-size:16px}
+.igp-bio{margin-top:6px;font-size:14px;line-height:1.55;color:#dfe5ec}
+.igp-bio span,.igp-stats span{display:inline;text-align:left;margin:0}.igp-stats span{display:block}.igp-bio span{color:#9fc9ff}
+.igp-btn{margin-top:16px;display:grid;place-items:center;min-height:44px;border-radius:10px;background:#fff;color:#05070d;font-weight:600;font-size:14px;transition:transform .25s}
+.igp-btn:hover{transform:translateY(-2px)}
+.igp-btn:focus-visible{outline:2px solid #7fe6f5;outline-offset:3px}
+.case .media.ig{aspect-ratio:auto;min-height:340px;padding:clamp(16px,3vw,32px)}
+/* demos page: tabs */
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:28px}
+.tabs button{font:inherit;text-align:left;color:#fff;cursor:pointer;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden;transition:border-color .3s,background .3s;min-height:44px}
+.tabs button b{display:block;font-size:17px;font-weight:700}
+.tabs button span{display:block;margin-top:3px;font-size:13px;color:var(--sub)}
+.tabs button::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#12E3F0,#1D5BFF,#8B5CF6);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.tabs button:hover{border-color:rgba(127,230,245,.4)}
+.tabs button[aria-selected="true"]{background:rgba(127,230,245,.07);border-color:rgba(127,230,245,.5)}
+.tabs button[aria-selected="true"]::after{transform:scaleX(1)}
+.tabs button:focus-visible{outline:2px solid #7fe6f5;outline-offset:3px}
+.tpanel.enter{animation:rise .6s cubic-bezier(.16,1,.3,1) both}
+.tlead{color:var(--sub);line-height:1.7;max-width:640px;margin-bottom:22px}
+.pill{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(127,230,245,.12);color:#7fe6f5}
+.pill-b{background:rgba(139,92,246,.18);color:#c9b6ff}
+.inp{font:inherit;font-size:16px;color:#fff;width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px;transition:border-color .25s}
+.inp:focus{outline:none;border-color:#7fe6f5}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* sistemas demo */
+.sysdemo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+.bk,.dash{padding:clamp(18px,2.6vw,28px)}
+.bk-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.bk-h b{font-size:18px}
+.bk-h small{color:#7d8693;font-size:12px}
+.bk-step{margin-bottom:18px}
+.bk-step h4,.lbl{display:block;font-size:13px;font-weight:600;color:#cfd6df;margin-bottom:9px}
+.days,.times{display:flex;flex-wrap:wrap;gap:8px}
+.days button,.times button{font:inherit;cursor:pointer;color:#dfe5ec;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:12px;min-height:44px;transition:all .2s}
+.days button{padding:6px 12px;text-align:center;line-height:1.25}
+.days button small{display:block;font-size:11px;color:#9aa6b4}
+.times button{padding:0 14px;font-size:14px;font-variant-numeric:tabular-nums}
+.days button[aria-pressed="true"],.times button[aria-pressed="true"]{background:#fff;color:#020204;border-color:#fff}
+.days button[aria-pressed="true"] small{color:#4a5566}
+.times button:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.days button:focus-visible,.times button:focus-visible{outline:2px solid #7fe6f5;outline-offset:2px}
+.bk-go{width:100%;height:52px;border-radius:13px;font-size:16px;font-weight:500;border:0;cursor:pointer;font-family:inherit;--hair:0 0 0 transparent}
+.bk-go::before{display:none}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.kpis div{padding:12px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+.kpis b{display:block;font-size:26px;font-weight:800;color:#7fe6f5;font-variant-numeric:tabular-nums}
+.kpis span{font-size:12px;color:var(--sub);line-height:1.3}
+.agenda{list-style:none;display:grid;gap:8px}
+.agenda li{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+.agenda time{font-weight:700;font-variant-numeric:tabular-nums}
+.agenda li b{display:block;font-size:14px}
+.agenda li span{font-size:12px;color:var(--sub)}
+.agenda em{font-style:normal;font-size:11px;font-weight:600;padding:3px 8px;border-radius:10px;background:rgba(94,230,168,.14);color:#7ef0bd;white-space:nowrap}
+.agenda li.free{opacity:.45;border-style:dashed}
+.agenda li.free em{background:rgba(255,255,255,.06);color:#9aa6b4}
+.agenda li.new{border-color:rgba(127,230,245,.7);background:rgba(127,230,245,.08);animation:landed 1.2s cubic-bezier(.16,1,.3,1)}
+.agenda li.new em{background:#7fe6f5;color:#04101f}
+@keyframes landed{0%{transform:translateX(-14px) scale(.98);opacity:0;box-shadow:0 0 0 0 rgba(18,227,240,.5)}40%{opacity:1}100%{transform:none;box-shadow:0 0 0 14px rgba(18,227,240,0)}}
+.kpis b.bump{animation:bump .6s ease}
+@keyframes bump{40%{transform:scale(1.25);color:#fff}}
+
+/* IA demo */
+.aidemo{max-width:760px;display:flex;flex-direction:column;overflow:hidden}
+.ai-top{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ai-top .pill{margin-left:auto}
+.ai-av{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#12E3F0,#1D5BFF);flex-shrink:0}
+.ai-av svg{width:22px;height:22px}
+.ai-top b{display:block}
+.ai-top small{color:#5ee6a8;font-size:12px}
+.ai-msgs{height:min(380px,52vh);overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:10px;background:radial-gradient(120% 80% at 50% 0%,rgba(29,91,255,.08),transparent 60%)}
+.am{max-width:82%;padding:11px 15px;border-radius:16px;line-height:1.55;font-size:15px;animation:pop2 .35s cubic-bezier(.2,.8,.2,1) both;white-space:pre-line}
+.am.bot{align-self:flex-start;background:rgba(255,255,255,.07);border-bottom-left-radius:4px}
+.am.me{align-self:flex-end;background:linear-gradient(90deg,#12E3F0,#1D5BFF);color:#04101f;font-weight:500;border-bottom-right-radius:4px}
+.am.typing{display:flex;gap:4px;padding:14px 16px}
+.am.typing i{width:7px;height:7px;border-radius:50%;background:#9aa6b4;animation:blink2 1s infinite}
+.am.typing i:nth-child(2){animation-delay:.15s}.am.typing i:nth-child(3){animation-delay:.3s}
+@keyframes pop2{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes blink2{0%,80%,100%{opacity:.3}40%{opacity:1}}
+.ai-quick{display:flex;gap:8px;padding:0 20px 12px;overflow-x:auto;scrollbar-width:none}
+.ai-quick::-webkit-scrollbar{display:none}
+.ai-quick button{font:inherit;font-size:13.5px;white-space:nowrap;cursor:pointer;color:#dff8ff;background:rgba(127,230,245,.08);border:1px solid rgba(127,230,245,.3);border-radius:20px;padding:0 14px;min-height:40px;transition:background .2s}
+.ai-quick button:hover{background:rgba(127,230,245,.18)}
+.ai-quick button:focus-visible{outline:2px solid #7fe6f5;outline-offset:2px}
+.ai-form{display:flex;gap:10px;padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.08)}
+.ai-send{width:48px;height:48px;flex-shrink:0;border-radius:12px;border:0;cursor:pointer;color:#04101f;background:linear-gradient(135deg,#12E3F0,#1D5BFF);display:grid;place-items:center}
+.ai-send svg{width:20px;height:20px}
+.ai-send:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+@media (max-width:860px){.sysdemo{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:620px){.tabs{grid-template-columns:minmax(0,1fr)}.tabs button{padding:12px 16px}.kpis b{font-size:22px}.am{font-size:14.5px}}
+@media (prefers-reduced-motion:reduce){.tpanel.enter,.agenda li.new,.kpis b.bump,.am,.am.typing i{animation:none}}
+
+/* one menu everywhere: the fixed page menu also serves the home page, so the scaled hero menu is retired */
+#nav{display:none!important}
+@media (max-width:700px){.canvas .badge{margin-top:calc(124px + env(safe-area-inset-top,0px))!important}}
+
+.social{display:flex;gap:10px}
+.soc{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);transition:transform .25s,background .25s,border-color .25s}
+.soc svg{width:20px;height:20px}
+.soc.ig:hover{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);border-color:transparent;transform:translateY(-2px)}
+.soc.wa2:hover{background:#25d366;border-color:transparent;transform:translateY(-2px)}
+.soc:focus-visible,.cbtn:focus-visible{outline:2px solid #7fe6f5;outline-offset:3px}
+.cbtns{display:grid;gap:10px;margin-top:18px}
+.cbtn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:13px;font-weight:600;font-size:15px;color:#fff;transition:transform .25s,filter .25s}
+.cbtn svg{width:20px;height:20px}
+.cbtn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.cwa{background:#1ea952}
+.cig{background:linear-gradient(45deg,#e8a21f,#d6246e 50%,#6228d7)}
+.handle{font-size:13px;color:#7d8693;text-align:center;user-select:all}
+</style>
 </head>
 <body>
-<div class="cursor-glow" aria-hidden="true"></div>
-<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="site-header" id="topo">
-  <div class="container header-inner">
-    <a href="#inicio" class="brand" aria-label="BGTech Consulting, início"><img src="logo.png" alt="BGTech Consulting" width="150" height="52"></a>
-    <nav class="nav" id="nav" aria-label="Menu principal">
-      <a href="#solucoes">Soluções</a><a href="#modelos">Modelos</a><a href="#clientes">Clientes</a><a href="#sobre">Sobre</a><a href="#processo">Processo</a>
-      <a class="btn btn-ghost nav-cta" href="https://wa.me/5511920193443?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20um%20projeto%20com%20a%20BGTech%20Consulting." target="_blank" rel="noopener">Vamos conversar ↗</a>
-    </nav>
-    <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
-  </div>
-</header>
 
-<main id="conteudo">
-<section class="hero" id="inicio">
-  <div class="glow" aria-hidden="true"></div>
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="lbl a-fade" style="--d:.2s">Sites · Sistemas · Atendimento com IA</div>
-      <h1 class="display">
-        <span class="ln"><span style="--d:.35s">Sua próxima</span></span>
-        <span class="ln"><span style="--d:.5s">fase começa</span></span>
-        <span class="ln"><span style="--d:.65s"><em>aqui.</em></span></span>
-      </h1>
-      <p class="lead a-up" style="--d:1s">Tecnologia sob medida para pequenos negócios, do site que apresenta você ao atendimento que nunca dorme.</p>
-      <div class="ctas a-up" style="--d:1.15s">
-        <a class="btn btn-primary" href="https://wa.me/5511920193443?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20um%20projeto%20com%20a%20BGTech." target="_blank" rel="noopener">Começar meu projeto ↗</a>
-        <a class="btn btn-ghost" href="#modelos">Ver modelos</a>
-      </div>
-    </div>
-    <div class="hero-media">
-      <div class="photo"><img src="/modelos/assets/hero-dentista.jpg" alt="Modelo de site OdontoViva criado pela BGTech" width="760" height="760"></div>
-      <div class="chat-card" aria-hidden="true">
-        <div class="who">Assistente BGTech · agora</div>
-        <div class="b1">Olá! Qual é o próximo passo para o seu negócio?</div>
-        <div class="typing-dots"><i></i><i></i><i></i></div>
-        <div class="b2">Quero um site profissional.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="stage view" id="top" data-view="inicio">
+  <div class="canvas" id="canvas">
+    <div class="bg"><div class="stars" id="stA"></div><div class="stars" id="stB"></div></div>
 
-<section class="section" id="solucoes">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2 class="display h2">Três formas de <em>crescer.</em></h2>
-      <p>Cada solução nasce de uma conversa sobre a sua rotina, e funciona sozinha ou em conjunto.</p>
-    </div>
-    <div class="cards">
-      <article class="card reveal"><div class="lbl">Sites</div><h3>Sites que representam você</h3><p>Da primeira impressão ao próximo contato, com a mesma identidade em cada tela.</p><a class="link" href="#modelos">Ver modelos ↗</a></article>
-      <article class="card reveal"><div class="lbl">Sistemas</div><h3>Sistemas sob medida</h3><p>Agendamentos, clientes e processos reunidos em um painel simples de usar.</p><button class="link" data-demo="agenda">Testar agendamento ↗</button></article>
-      <article class="card reveal"><div class="lbl">Atendimento com IA</div><h3>Atendimento que não dorme</h3><p>Responde no WhatsApp, organiza o pedido e passa para uma pessoa na hora certa.</p><button class="link" data-demo="chat">Ver conversa simulada ↗</button></article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="modelos">
-  <div class="container">
-    <div class="section-head reveal">
-      <div><div class="lbl">Modelos navegáveis</div><h2 class="display h2">Veja. Explore. <em>Imagine o seu.</em></h2></div>
-      <p>Seis sites completos, de segmentos diferentes, para você navegar como cliente.</p>
-    </div>
-    <div class="filters" role="group" aria-label="Filtrar modelos">
-      <button class="chosen" data-filter="all" aria-pressed="true">Todos</button>
-      <button data-filter="dentista" aria-pressed="false">Odontologia</button>
-      <button data-filter="advocacia" aria-pressed="false">Advocacia</button>
-      <button data-filter="contabilidade" aria-pressed="false">Contabilidade</button>
-      <button data-filter="estetica" aria-pressed="false">Estética</button>
-      <button data-filter="restaurante" aria-pressed="false">Restaurante</button>
-      <button data-filter="educacao" aria-pressed="false">Educação</button>
-    </div>
-    <div class="models sector-grid">
-      <a class="model reveal" data-sector="dentista" href="/modelos/dentista/"><div class="thumb"><img src="/modelos/assets/hero-dentista.jpg" alt="" loading="lazy"></div><div class="meta"><strong>OdontoViva</strong><span>Odontologia ↗</span></div></a>
-      <a class="model reveal" data-sector="advocacia" href="/modelos/advocacia/"><div class="thumb"><img src="/modelos/assets/hero-advocacia.jpg" alt="" loading="lazy"></div><div class="meta"><strong>Lumen Advocacia</strong><span>Advocacia ↗</span></div></a>
-      <a class="model reveal" data-sector="contabilidade" href="/modelos/contabilidade/"><div class="thumb"><img src="/modelos/assets/hero-contabilidade.jpg" alt="" loading="lazy"></div><div class="meta"><strong>Nexo Contábil</strong><span>Contabilidade ↗</span></div></a>
-      <a class="model reveal" data-sector="estetica" href="/modelos/estetica/"><div class="thumb"><img src="/modelos/assets/hero-estetica.jpg" alt="" loading="lazy"></div><div class="meta"><strong>Aura Clínica</strong><span>Estética ↗</span></div></a>
-      <a class="model reveal" data-sector="restaurante" href="/modelos/restaurante/"><div class="thumb"><img src="/modelos/assets/hero-restaurante.jpg" alt="" loading="lazy"></div><div class="meta"><strong>Casa Brasa</strong><span>Restaurante ↗</span></div></a>
-      <a class="model reveal" data-sector="educacao" href="/modelos/educacao/"><div class="thumb"><img src="/modelos/assets/hero-educacao.jpg" alt="" loading="lazy"></div><div class="meta"><strong>Horizonte</strong><span>Educação ↗</span></div></a>
-    </div>
-    <p class="disclosure">Marcas e conteúdos fictícios, criados para demonstrar possibilidades. Formulários locais, sem envio de dados.</p>
-  </div>
-</section>
-
-<section class="section" id="clientes">
-  <div class="container">
-    <div class="section-head reveal">
-      <div><div class="lbl">Clientes</div><h2 class="display h2">Quem já <em>confiou.</em></h2></div>
-      <p>Projetos reais, feitos com atendimento próximo do começo ao fim.</p>
-    </div>
-    <div class="clients">
-      <a class="client reveal" href="https://dedconstrucao.com" target="_blank" rel="noopener">
-        <div class="client-art shot"><img src="clientes/dd-construcao.jpg" alt="Página inicial do site da D&amp;D Construção" loading="lazy" style="object-position:50% 0"></div>
-        <div class="client-body">
-          <div class="tags"><span>Site institucional</span><span>WordPress</span></div>
-          <h3>D&amp;D Construção</h3>
-          <p>Site da construtora, com apresentação da empresa, serviços e canais de contato.</p>
-          <span class="link">Visitar o site ↗</span>
+    <div class="showcase" id="showcase">
+      <div class="ring" id="ring" aria-hidden="true"></div>
+      <div class="browser" id="browser">
+        <div class="bar">
+          <div class="dots"><i style="background:#ee5c62"></i><i style="background:#f6b719"></i><i style="background:#12c02f"></i></div>
+          <div class="omni"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg><span>painel.bgtech — Atendimento com IA (demonstração)</span></div>
+          <div class="tools"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 15v5h16v-5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3 3 8l9 5 9-5-9-5Z" fill="#fff" opacity=".95"/><path d="M3 13l9 5 9-5" opacity=".55"/></svg></div>
         </div>
-      </a>
-      <a class="client reveal" href="https://www.instagram.com/profdeiadarobotica/" target="_blank" rel="noopener">
-        <div class="client-art ig-profile">
-          <div class="igp">
-            <img class="igp-avatar" src="clientes/prof-deia-avatar.jpg" alt="Foto do perfil da Prof. Déia da Robótica" loading="lazy" width="154" height="154">
-            <div class="igp-info">
-              <strong>profdeiadarobotica</strong>
-              <div class="igp-stats"><span><b>2.493</b> seguidores</span><span><b>98</b> seguindo</span></div>
-              <b class="igp-name">Andreia Bozelli | Robótica Educacional</b>
-              <p>Professora apaixonada por Robótica e Tecnologia Educacional<br>Transformando salas de aula com inovação</p>
-              <span class="igp-link">linktr.ee/profdeiadarobotica</span>
-            </div>
+        <div class="page chatapp">
+          <aside class="convs" aria-hidden="true">
+            <div class="ch-h">Conversas <span class="live">● IA ativa</span></div>
+            <div class="cv-i on"><i style="background:#8B5CF6">M</i><div><b>Mariana Souza</b><span id="cvPrev">digitando…</span></div></div>
+            <div class="cv-i"><i style="background:#0E7C90">R</i><div><b>Rafael Lima</b><span>Orçamento enviado ✓</span></div></div>
+            <div class="cv-i"><i style="background:#1D5BFF">J</i><div><b>Juliana Alves</b><span>Confirmou presença ✓</span></div></div>
+          </aside>
+          <section class="chat" aria-label="Demonstração do atendimento com IA">
+            <div class="ch-top"><i style="background:#8B5CF6">M</i><div><b>Mariana Souza</b><span>WhatsApp · Aura Clínica (modelo)</span></div></div>
+            <div class="msgs" id="msgs" aria-live="polite"></div>
+          </section>
+          <aside class="lead">
+            <div class="ch-h">Ficha gerada pela IA</div>
+            <dl>
+              <div><dt>Cliente</dt><dd data-f="nome">—</dd></div>
+              <div><dt>Serviço</dt><dd data-f="serv">—</dd></div>
+              <div><dt>Horário</dt><dd data-f="hora">—</dd></div>
+              <div><dt>Status</dt><dd data-f="st"><span class="st">Em atendimento</span></dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a class="logo" href="#" aria-label="BGTech Consulting, início"><img src="/assets/bgtech-consulting.png" alt="BGTech Consulting"></a>
+        <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
+        <div class="navmenu" id="navmenu">
+          <div class="links" id="links">
+            <a href="#solucoes">Soluções</a><a href="#modelos">Experimente</a><a href="#clientes">Clientes</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
           </div>
+          <a class="btn" href="#contato"><span>Começar projeto</span></a>
         </div>
-        <div class="client-body">
-          <div class="tags"><span>Tráfego pago</span><span>Instagram</span></div>
-          <h3>Prof. Déia da Robótica</h3>
-          <p>Gestão de anúncios no Instagram para divulgar as aulas e cursos de robótica.</p>
-          <span class="link ig-link"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg> @profdeiadarobotica ↗</span>
-        </div>
-      </a>
+      </nav>
+      <div class="badge"><i><svg viewBox="5 1 14 22" preserveAspectRatio="none"><path d="M13.9 1.6 5.5 13.6a.7.7 0 0 0 .6 1.1h4.2l-1 7.7a.7.7 0 0 0 1.25.55l8.3-12.1a.7.7 0 0 0-.6-1.1h-4.2l1-7.7a.7.7 0 0 0-1.25-.55Z" fill="rgba(16,112,152,.72)" stroke="rgba(190,236,255,.6)" stroke-width="1.6" stroke-linejoin="round"/></svg></i><b>Sites, sistemas e IA para pequenos negócios</b></div>
+      <h1 class="h1" id="h1a">Sua próxima fase</h1>
+      <div class="h1" id="h1b" aria-hidden="false"><em>começa aqui</em></div>
+      <p class="sub" id="sub1"><b>Sites que apresentam, sistemas que organizam</b> e atendimento com IA</p>
+      <p class="sub" id="sub2">que responde no WhatsApp enquanto você cuida do negócio.</p>
+      <a class="btn cta2" href="#modelos"><span>Ver modelos</span></a>
     </div>
   </div>
-</section>
+  <a class="wa" href="https://wa.me/5511920193443" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.3 28.8l6.6-1.7A12.7 12.7 0 1 0 16 3.2Zm0 23.2c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.5 10.5 0 1 1 16 26.4Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4Z"/></svg></a>
+</div>
 
-<section class="section about" id="sobre">
-  <div class="container about-grid">
-    <figure class="portrait reveal"><img src="bruno.jpg" alt="Bruno, fundador da BGTech Consulting" loading="lazy" width="900" height="1200"></figure>
-    <div class="reveal">
-      <div class="lbl">Quem está por trás</div>
-      <h2 class="display h2">Antes do projeto, vem a <em>escuta.</em></h2>
-      <p class="body">Sou o Bruno, fundador da BGTech Consulting. São mais de 7 anos em tecnologia ajudando negócios a transformar ideias em soluções digitais, com atendimento próximo do começo ao fim.</p>
-      <p class="body">Meu trabalho começa entendendo sua rotina, seus desafios e o que você quer construir. A partir daí, desenvolvo sites, sistemas e automações com propósito e atenção aos detalhes.</p>
-      <blockquote class="display quote">“Uma boa solução começa com uma boa conversa.”</blockquote>
-      <a class="btn btn-primary" href="https://wa.me/5511920193443?text=Ol%C3%A1%20Bruno%21%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar com o Bruno ↗</a>
+
+
+
+<header class="sub-head" id="subHead">
+  <nav class="sub-nav" aria-label="Páginas">
+    <a class="lg" href="#inicio" aria-label="BGTech Consulting, início"><img src="/assets/bgtech-consulting.png" alt="BGTech Consulting"></a>
+    <div class="sub-links">
+      <a href="#inicio">Início</a><a href="#solucoes">Soluções</a><a href="#modelos">Experimente</a><a href="#clientes">Clientes</a><a href="#sobre">Sobre</a>
     </div>
-  </div>
-</section>
+    <a class="btn" href="#contato"><span>Começar projeto</span></a>
+  </nav>
+</header>
+<div class="curtain" id="curtain" aria-hidden="true"><i></i><b></b></div>
 
-<section class="section" id="processo">
-  <div class="container">
-    <div class="lbl reveal">Como construímos juntos</div>
-    <ol class="steps">
-      <li class="reveal"><span class="lbl">Passo 1</span><h3 class="display">Entender.</h3><p>Conversamos sobre o negócio, as pessoas e o que o projeto precisa resolver.</p></li>
-      <li class="reveal"><span class="lbl">Passo 2</span><h3 class="display">Desenvolver.</h3><p>Transformamos o objetivo em experiência, com etapas e entregas alinhadas.</p></li>
-      <li class="reveal"><span class="lbl">Passo 3</span><h3 class="display">Acompanhar.</h3><p>Validamos o funcionamento, ajustamos e seguimos juntos na evolução.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="section" id="contato">
-  <div class="container">
-    <div class="closing reveal">
-      <h2 class="display">Qual ideia você quer tirar do <em>papel?</em></h2>
-      <p>Conte o que seu negócio precisa. Respondo pessoalmente.</p>
-      <a class="btn btn-primary btn-lg" href="https://wa.me/5511920193443?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20BGTech%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Conversar pelo WhatsApp ↗</a>
+<!-- SOLUÇÕES -->
+<main class="view" data-view="solucoes" hidden>
+  <section class="phero">
+    <svg class="arc" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#1D5BFF" stop-opacity="0"/><stop offset=".45" stop-color="#1D5BFF"/><stop offset=".75" stop-color="#12E3F0"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient><filter id="ab"><feGaussianBlur stdDeviation="22"/></filter></defs><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="70" filter="url(#ab)" opacity=".35"/><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="2.2" opacity=".85"/><path class="draw" d="M-40 650 C 460 520, 920 300, 1480 140" stroke="url(#ag)" stroke-width="1" opacity=".4"/></svg>
+    <div class="wrap">
+      <span class="eyebrow" data-in style="--d:100ms">Soluções</span>
+      <h1><span class="line-wipe"><span style="--d:150ms">Três formas</span></span><span class="line-wipe"><span style="--d:260ms">de <em>crescer.</em></span></span></h1>
+      <p class="lede" data-in style="--d:480ms">Cada solução nasce de uma conversa sobre a sua rotina, e funciona sozinha ou em conjunto.</p>
     </div>
-  </div>
-</section>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <article class="srow">
+        <div data-in style="--d:550ms"><span class="num">01</span><h2>Sites que representam você</h2><p>Da primeira impressão ao próximo contato, com a mesma identidade em cada tela.</p>
+          <ul><li>Site institucional ou landing page</li><li>Pronto para Google e celular</li><li>Botão direto para o WhatsApp</li></ul><a class="link" href="#modelos">Ver modelos →</a></div>
+        <div class="viz" data-in style="--d:650ms" aria-hidden="true"><div class="v-site"><div class="tb"><i></i><i></i><i></i></div>
+          <div class="blk" style="left:6%;right:6%;top:30px;height:14px;background:#0A1F44;--d:.2s"></div>
+          <div class="blk" style="left:6%;width:52%;top:58px;height:70px;background:linear-gradient(120deg,#1D5BFF,#12E3F0);--d:.6s"></div>
+          <div class="blk" style="left:62%;right:6%;top:58px;height:70px;background:#dfe7f1;--d:1s"></div>
+          <div class="blk" style="left:6%;width:27%;top:140px;height:56px;background:#e8edf4;--d:1.4s"></div>
+          <div class="blk" style="left:36.5%;width:27%;top:140px;height:56px;background:#e8edf4;--d:1.6s"></div>
+          <div class="blk" style="left:67%;right:6%;top:140px;height:56px;background:#e8edf4;--d:1.8s"></div>
+          <div class="blk" style="right:6%;width:30%;top:208px;height:22px;border-radius:11px;background:#25d366;--d:2.3s"></div>
+        </div></div>
+      </article>
+      <article class="srow">
+        <div data-in style="--d:300ms"><span class="num">02</span><h2>Sistemas sob medida</h2><p>Agendamentos, clientes e processos reunidos em um painel simples de usar.</p>
+          <ul><li>Agenda online com confirmação</li><li>Cadastro e histórico de clientes</li><li>Painel com o que importa no dia</li></ul><a class="link" href="#contato">Quero um sistema →</a></div>
+        <div class="viz" data-in style="--d:400ms" aria-hidden="true"><div class="v-cal"><div class="day"><b>SEG</b><div class="slot"></div><div class="slot"><u style="--d:1.2s">Mariana · 9h</u></div><div class="slot"></div><div class="slot"><u style="--d:3.0s">Gil · 15h</u></div><div class="slot"></div></div><div class="day"><b>TER</b><div class="slot"><u style="--d:0.3s">Rafael · 8h</u></div><div class="slot"></div><div class="slot"></div><div class="slot"><u style="--d:3.4s">Juliana · 15h</u></div><div class="slot"></div></div><div class="day"><b>QUA</b><div class="slot"></div><div class="slot"></div><div class="slot"><u style="--d:2.1s">Carlos · 11h</u></div><div class="slot"></div><div class="slot"><u style="--d:4.3s">Rui · 17h</u></div></div><div class="day"><b>QUI</b><div class="slot"><u style="--d:0.8s">Ana · 8h</u></div><div class="slot"></div><div class="slot"><u style="--d:2.5s">Pedro · 14h</u></div><div class="slot"></div><div class="slot"></div></div><div class="day"><b>SEX</b><div class="slot"></div><div class="slot"><u style="--d:1.7s">Lia · 10h</u></div><div class="slot"></div><div class="slot"><u style="--d:3.9s">Bia · 16h</u></div><div class="slot"></div></div></div></div>
+      </article>
+      <article class="srow">
+        <div data-in style="--d:300ms"><span class="num">03</span><h2>Atendimento que não dorme</h2><p>Responde no WhatsApp, organiza o pedido e passa para uma pessoa na hora certa.</p>
+          <ul><li>Agente de IA treinado no seu negócio</li><li>Agenda e envia lembretes sozinho</li><li>Transfere para você quando precisa</li></ul><a class="link" href="#inicio">Ver o painel em ação →</a></div>
+        <div class="viz" data-in style="--d:400ms" aria-hidden="true"><div class="v-phone">
+          <p class="i" style="--d:.3s">Boa noite! Vocês abrem sábado?</p>
+          <p class="o" style="--d:1.6s">Boa noite! Abrimos sábado das 9h às 13h. Quer reservar um horário?</p>
+          <p class="i" style="--d:3s">Quero, 10h se tiver.</p>
+          <p class="o" style="--d:4.3s">Reservado: sábado, 10h ✓ Mando um lembrete na sexta.</p>
+        </div></div>
+      </article>
+      <a class="next glass" href="#modelos"><span><small>Próxima página</small><b>Experimente na prática</b></span><span class="go" aria-hidden="true">→</span></a>
+    </div>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <img src="logo.png" alt="BGTech Consulting" width="120" height="42">
-    <span>© BGTech Consulting · Diadema, SP</span>
-    <div class="footer-links"><div class="socials"><a class="social" href="https://www.instagram.com/bgtech.consulting/" target="_blank" rel="noopener" aria-label="Instagram da BGTech"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a><a class="social" href="https://wa.me/5511920193443" target="_blank" rel="noopener" aria-label="WhatsApp da BGTech"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a><a class="social" href="mailto:bgtechenterprise@gmail.com" aria-label="E-mail da BGTech"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></a></div><a href="#inicio" class="to-top">Topo ↑</a></div>
-  </div>
-</footer>
+<!-- MODELOS -->
+<main class="view" data-view="modelos" hidden>
+  <section class="phero">
+    <svg class="arc" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#1D5BFF" stop-opacity="0"/><stop offset=".45" stop-color="#1D5BFF"/><stop offset=".75" stop-color="#12E3F0"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient><filter id="ab"><feGaussianBlur stdDeviation="22"/></filter></defs><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="70" filter="url(#ab)" opacity=".35"/><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="2.2" opacity=".85"/><path class="draw" d="M-40 650 C 460 520, 920 300, 1480 140" stroke="url(#ag)" stroke-width="1" opacity=".4"/></svg>
+    <div class="wrap">
+      <span class="eyebrow" data-in style="--d:100ms">Experimente</span>
+      <h1><span class="line-wipe"><span style="--d:150ms">Veja funcionando.</span></span><span class="line-wipe"><span style="--d:260ms"><em>Imagine o seu.</em></span></span></h1>
+      <p class="lede" data-in style="--d:480ms">Sites para navegar, um sistema de agendamento para testar e um agente de IA para conversar. Tudo como o seu cliente vai ver.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="tabs" role="tablist" aria-label="Tipo de demonstração" data-in style="--d:550ms">
+        <button type="button" role="tab" id="t-sites" aria-controls="p-sites" aria-selected="true"><b>Sites</b><span>6 modelos navegáveis</span></button>
+        <button type="button" role="tab" id="t-sis" aria-controls="p-sis" aria-selected="false" tabindex="-1"><b>Sistemas</b><span>Agende um horário</span></button>
+        <button type="button" role="tab" id="t-ia" aria-controls="p-ia" aria-selected="false" tabindex="-1"><b>Agentes de IA</b><span>Converse com o assistente</span></button>
+      </div>
 
-<a class="wa-fab" href="https://wa.me/5511920193443?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20BGTech%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Fale conosco</span></a>
-<dialog id="demo-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><div><small>EXPERIÊNCIA INTERATIVA / DADOS FICTÍCIOS</small><h2 id="dialog-title">Demonstração</h2></div><button id="close" aria-label="Fechar demonstração">×</button></div><div id="demo-body"></div></dialog>
-<script src="app.js"></script>
-<script src="chat.js"></script>
+      <div class="tpanel" role="tabpanel" id="p-sites" aria-labelledby="t-sites">
+      <div class="chips" role="group" aria-label="Filtrar por segmento" data-in style="--d:550ms">
+        <button type="button" data-f="all" aria-pressed="true">Todos</button><button type="button" data-f="saude" aria-pressed="false">Saúde e beleza</button><button type="button" data-f="servicos" aria-pressed="false">Serviços</button><button type="button" data-f="gastronomia" aria-pressed="false">Gastronomia</button><button type="button" data-f="educacao" aria-pressed="false">Educação</button>
+      </div>
+      <div class="mgrid" id="mgrid"><a class="mcard" data-cat="saude" data-in style="--d:600ms" href="/modelos/dentista/" target="_blank" rel="noopener"><img src="/assets/hero-dentista.jpg" alt="Modelo OdontoViva, segmento Odontologia"><span class="shine"></span><div class="meta"><div><small>Odontologia</small><b>OdontoViva</b></div><span class="go" aria-hidden="true">↗</span></div></a><a class="mcard" data-cat="servicos" data-in style="--d:690ms" href="/modelos/advocacia/" target="_blank" rel="noopener"><img src="/assets/hero-advocacia.jpg" alt="Modelo Lumen, segmento Advocacia"><span class="shine"></span><div class="meta"><div><small>Advocacia</small><b>Lumen</b></div><span class="go" aria-hidden="true">↗</span></div></a><a class="mcard" data-cat="servicos" data-in style="--d:780ms" href="/modelos/contabilidade/" target="_blank" rel="noopener"><img src="/assets/hero-contabilidade.jpg" alt="Modelo Nexo Contábil, segmento Contabilidade"><span class="shine"></span><div class="meta"><div><small>Contabilidade</small><b>Nexo Contábil</b></div><span class="go" aria-hidden="true">↗</span></div></a><a class="mcard" data-cat="saude" data-in style="--d:870ms" href="/modelos/estetica/" target="_blank" rel="noopener"><img src="/assets/hero-estetica.jpg" alt="Modelo Aura Clínica, segmento Estética"><span class="shine"></span><div class="meta"><div><small>Estética</small><b>Aura Clínica</b></div><span class="go" aria-hidden="true">↗</span></div></a><a class="mcard" data-cat="gastronomia" data-in style="--d:960ms" href="/modelos/restaurante/" target="_blank" rel="noopener"><img src="/assets/hero-restaurante.jpg" alt="Modelo Casa Brasa, segmento Restaurante"><span class="shine"></span><div class="meta"><div><small>Restaurante</small><b>Casa Brasa</b></div><span class="go" aria-hidden="true">↗</span></div></a><a class="mcard" data-cat="educacao" data-in style="--d:1050ms" href="/modelos/educacao/" target="_blank" rel="noopener"><img src="/assets/hero-educacao.jpg" alt="Modelo Horizonte, segmento Educação"><span class="shine"></span><div class="meta"><div><small>Educação</small><b>Horizonte</b></div><span class="go" aria-hidden="true">↗</span></div></a></div>
+      <p class="note" data-in style="--d:900ms">Marcas e conteúdos fictícios, criados para demonstrar possibilidades.</p>
+      </div>
+
+      <div class="tpanel" role="tabpanel" id="p-sis" aria-labelledby="t-sis" hidden>
+        <p class="tlead">Um sistema de agendamento como os que a BGTech desenvolve. Faça um agendamento como cliente e veja o painel do negócio atualizar na hora.</p>
+        <div class="sysdemo">
+          <section class="bk glass" aria-label="Tela do cliente">
+            <div class="bk-h"><span class="pill">Tela do cliente</span><b>Aura Clínica</b><small>modelo fictício</small></div>
+            <div class="bk-step"><h4>1. Serviço</h4><div class="opts" id="bkServ">
+              <label><input type="radio" name="serv" id="sv1" value="Limpeza de pele" checked><span>Limpeza de pele</span></label>
+              <label><input type="radio" name="serv" id="sv2" value="Massagem relaxante"><span>Massagem relaxante</span></label>
+              <label><input type="radio" name="serv" id="sv3" value="Design de sobrancelha"><span>Design de sobrancelha</span></label></div></div>
+            <div class="bk-step"><h4>2. Dia</h4><div class="days" id="bkDays"></div></div>
+            <div class="bk-step"><h4>3. Horário</h4><div class="times" id="bkTimes"></div></div>
+            <div class="bk-step"><label class="lbl" for="bkName">4. Seu nome</label><input id="bkName" class="inp" autocomplete="name" placeholder="Ex.: Carla"></div>
+            <p class="err" id="bkErr" role="alert"></p>
+            <button class="btn bk-go" type="button" id="bkGo"><span>Confirmar agendamento</span></button>
+          </section>
+          <section class="dash glass" aria-label="Painel do negócio">
+            <div class="bk-h"><span class="pill pill-b">Painel do negócio</span><b id="dDay">Agenda</b><small>atualiza em tempo real</small></div>
+            <div class="kpis"><div><b id="kTot">0</b><span>agendamentos no dia</span></div><div><b id="kFree">0</b><span>horários livres</span></div><div><b>✓</b><span>lembrete automático</span></div></div>
+            <ol class="agenda" id="agenda" aria-live="polite"></ol>
+          </section>
+        </div>
+        <p class="note">Demonstração com dados fictícios. Nada é enviado ou salvo.</p>
+      </div>
+
+      <div class="tpanel" role="tabpanel" id="p-ia" aria-labelledby="t-ia" hidden>
+        <p class="tlead">Um agente de atendimento como os que a BGTech configura no WhatsApp. Toque em uma pergunta ou escreva a sua.</p>
+        <div class="aidemo glass">
+          <div class="ai-top"><span class="ai-av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#04101f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c5-4 9-6 14-6.5"/><path d="M15 5l4 3.5-4 3.5"/></svg></span><div><b>Assistente BGTech</b><small id="aiStatus">online</small></div><span class="pill">Simulação</span></div>
+          <div class="ai-msgs" id="aiMsgs" aria-live="polite"></div>
+          <div class="ai-quick" id="aiQuick"></div>
+          <form class="ai-form" id="aiForm"><label class="sr" for="aiIn">Sua mensagem</label><input id="aiIn" class="inp" autocomplete="off" placeholder="Escreva uma pergunta…"><button class="ai-send" type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>
+        </div>
+        <p class="note">Respostas de demonstração. No seu negócio, o agente aprende os seus serviços, preços e horários.</p>
+      </div>
+
+      <a class="next glass" href="#clientes"><span><small>Próxima página</small><b>Clientes reais</b></span><span class="go" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- CLIENTES -->
+<main class="view" data-view="clientes" hidden>
+  <section class="phero">
+    <svg class="arc" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#1D5BFF" stop-opacity="0"/><stop offset=".45" stop-color="#1D5BFF"/><stop offset=".75" stop-color="#12E3F0"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient><filter id="ab"><feGaussianBlur stdDeviation="22"/></filter></defs><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="70" filter="url(#ab)" opacity=".35"/><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="2.2" opacity=".85"/><path class="draw" d="M-40 650 C 460 520, 920 300, 1480 140" stroke="url(#ag)" stroke-width="1" opacity=".4"/></svg>
+    <div class="wrap">
+      <span class="eyebrow" data-in style="--d:100ms">Clientes</span>
+      <h1><span class="line-wipe"><span style="--d:150ms">Quem já</span></span><span class="line-wipe"><span style="--d:260ms"><em>confiou.</em></span></span></h1>
+      <p class="lede" data-in style="--d:480ms">Projetos reais, feitos com atendimento próximo do começo ao fim.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <article class="case">
+        <div class="media" data-in style="--d:550ms"><img src="/clientes/dd-construcao.jpg" alt="Página inicial do site da D&amp;D Construção"></div>
+        <div data-in style="--d:680ms"><small>Site institucional · WordPress</small><h2>D&amp;D Construção</h2><p>Site da construtora, com apresentação da empresa, serviços e canais de contato. Passe o mouse na imagem para percorrer a página.</p><a class="link" href="https://dedconstrucao.com" target="_blank" rel="noopener">Visitar o site ↗</a></div>
+      </article>
+      <article class="case">
+        <div class="media ig" data-in style="--d:300ms"><div class="igp">
+  <div class="igp-top"><span class="igp-av"><img src="/clientes/prof-deia-avatar.jpg" alt="Foto de perfil de Andreia Bozelli"></span>
+    <div class="igp-stats"><div><b class="count" data-count="2493">0</b><span>seguidores</span></div><div><b>98</b><span>seguindo</span></div></div></div>
+  <div class="igp-user">profdeiadarobotica</div>
+  <div class="igp-bio"><b>Andreia Bozelli | Robótica Educacional</b><br>Professora apaixonada por Robótica e Tecnologia Educacional<br>Transformando salas de aula com inovação<br><span>linktr.ee/profdeiadarobotica</span></div>
+  <a class="igp-btn" href="https://instagram.com/profdeiadarobotica" target="_blank" rel="noopener">Ver perfil no Instagram ↗</a>
+</div></div>
+        <div data-in style="--d:420ms"><small>Tráfego pago · Instagram</small><h2>Prof. Déia da Robótica</h2><p>Gestão de anúncios no Instagram para divulgar as aulas e cursos de robótica educacional.</p><a class="link" href="https://instagram.com/profdeiadarobotica" target="_blank" rel="noopener">@profdeiadarobotica ↗</a></div>
+      </article>
+      <a class="next glass" href="#sobre"><span><small>Próxima página</small><b>Quem está por trás</b></span><span class="go" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- SOBRE -->
+<main class="view" data-view="sobre" hidden>
+  <section class="phero">
+    <svg class="arc" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#1D5BFF" stop-opacity="0"/><stop offset=".45" stop-color="#1D5BFF"/><stop offset=".75" stop-color="#12E3F0"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient><filter id="ab"><feGaussianBlur stdDeviation="22"/></filter></defs><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="70" filter="url(#ab)" opacity=".35"/><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="2.2" opacity=".85"/><path class="draw" d="M-40 650 C 460 520, 920 300, 1480 140" stroke="url(#ag)" stroke-width="1" opacity=".4"/></svg>
+    <div class="wrap about">
+      <div class="photo"><img src="/assets/bruno-bgtech-2026.jpg" alt="Bruno, fundador da BGTech Consulting"></div>
+      <div>
+        <span class="eyebrow" data-in style="--d:300ms">Quem está por trás</span>
+        <h1 style="font-size:clamp(38px,6vw,76px)"><span class="line-wipe"><span style="--d:380ms">Antes do projeto,</span></span><span class="line-wipe"><span style="--d:480ms">vem a <em>escuta.</em></span></span></h1>
+        <p class="lede" data-in style="--d:700ms">Sou o Bruno, fundador da BGTech Consulting. São mais de 7 anos em tecnologia ajudando negócios a transformar ideias em soluções digitais, com atendimento próximo do começo ao fim.</p>
+        <p class="quote" data-in style="--d:820ms">“Uma boa solução começa com uma boa conversa.”</p>
+        <div class="facts" data-in style="--d:940ms"><div><b data-count="7" data-suffix="+">0</b><span>anos em tecnologia</span></div><div><b data-count="3">0</b><span>frentes: site, sistema e IA</span></div><div><b>1:1</b><span>atendimento direto comigo</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow" data-in style="--d:900ms">Processo</span>
+      <h2 class="h2" data-in style="--d:980ms">Como construímos <em>juntos.</em></h2>
+      <div class="timeline"><div class="rail"><i></i></div>
+        <div class="tstep" data-in style="--d:1050ms"><div class="dot" style="--d:700ms">1</div><h3>Entender.</h3><p>Conversamos sobre o negócio, as pessoas e o que o projeto precisa resolver.</p></div>
+        <div class="tstep" data-in style="--d:1150ms"><div class="dot" style="--d:1300ms">2</div><h3>Desenvolver.</h3><p>Transformamos o objetivo em experiência, com etapas e entregas alinhadas.</p></div>
+        <div class="tstep" data-in style="--d:1250ms"><div class="dot" style="--d:1900ms">3</div><h3>Acompanhar.</h3><p>Validamos o funcionamento, ajustamos e seguimos juntos na evolução.</p></div>
+      </div>
+      <a class="next glass" href="#contato"><span><small>Próxima página</small><b>Vamos conversar</b></span><span class="go" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- CONTATO -->
+<main class="view" data-view="contato" hidden>
+  <section class="phero">
+    <svg class="arc" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#1D5BFF" stop-opacity="0"/><stop offset=".45" stop-color="#1D5BFF"/><stop offset=".75" stop-color="#12E3F0"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient><filter id="ab"><feGaussianBlur stdDeviation="22"/></filter></defs><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="70" filter="url(#ab)" opacity=".35"/><path class="draw" d="M-40 600 C 420 470, 880 240, 1480 70" stroke="url(#ag)" stroke-width="2.2" opacity=".85"/><path class="draw" d="M-40 650 C 460 520, 920 300, 1480 140" stroke="url(#ag)" stroke-width="1" opacity=".4"/></svg>
+    <div class="wrap">
+      <span class="eyebrow" data-in style="--d:100ms">Contato</span>
+      <h1><span class="line-wipe"><span style="--d:150ms">Qual ideia você quer</span></span><span class="line-wipe"><span style="--d:260ms">tirar do <em>papel?</em></span></span></h1>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap contact">
+      <div data-in style="--d:450ms">
+        <p class="lede" style="margin-top:0">Conte o que seu negócio precisa. Respondo pessoalmente.</p>
+        <div class="direct">
+          <div><span>WhatsApp</span><b>(11) 92019-3443</b></div>
+          <div><span>Serviços</span><b>Sites, sistemas e IA</b></div>
+        </div>
+        <div class="cbtns"><a class="cbtn cwa" href="https://wa.me/5511920193443" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.3 28.8l6.6-1.7A12.7 12.7 0 1 0 16 3.2Zm0 23.2c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.5 10.5 0 1 1 16 26.4Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4Z"/></svg><span>Chamar no WhatsApp</span></a><a class="cbtn cig" href="https://instagram.com/bgtech.consulting" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg><span>Seguir no Instagram</span></a><p class="handle">@bgtech.consulting</p>
+        </div>
+      </div>
+      <div class="glass" data-in style="--d:560ms">
+        <form class="form" id="form" novalidate>
+          <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+          <div class="field"><label for="f-neg">Nome do negócio</label><input id="f-neg" name="negocio" autocomplete="organization"></div>
+          <fieldset class="field"><legend>O que você precisa?</legend>
+            <div class="opts"><label><input type="checkbox" id="o-site" name="o" value="Site"><span>Site</span></label><label><input type="checkbox" id="o-sis" name="o" value="Sistema"><span>Sistema</span></label><label><input type="checkbox" id="o-ia" name="o" value="Atendimento com IA"><span>Atendimento com IA</span></label><label><input type="checkbox" id="o-tr" name="o" value="Tráfego pago"><span>Tráfego pago</span></label></div>
+          </fieldset>
+          <div class="field"><label for="f-msg">Conte um pouco</label><textarea id="f-msg" name="msg" placeholder="Ex.: tenho uma clínica e quero agendar pelo WhatsApp"></textarea></div>
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn" type="submit"><span>Montar minha mensagem</span></button>
+        </form>
+        <div class="done" id="done" hidden>
+          <div class="ok"><svg viewBox="0 0 34 34" fill="none" stroke="#04101f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5l5.5 5.5L25 11.5"/></svg></div>
+          <h3>Mensagem pronta!</h3>
+          <p id="doneTxt"></p>
+          <a class="btn sbtn" id="waLink" href="https://wa.me/5511920193443" target="_blank" rel="noopener"><span>Abrir no WhatsApp</span></a>
+          <button type="button" class="link" id="again" style="background:none;border:0;cursor:pointer;font-family:inherit;min-height:44px">Editar resposta</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"><div class="wrap"><img src="/assets/bgtech-consulting.png" alt="BGTech Consulting"><span>© BGTech Consulting</span><div class="social"><a class="soc ig" href="https://instagram.com/bgtech.consulting" target="_blank" rel="noopener" aria-label="Instagram da BGTech"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a><a class="soc wa2" href="https://wa.me/5511920193443" target="_blank" rel="noopener" aria-label="WhatsApp da BGTech"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.3 28.8l6.6-1.7A12.7 12.7 0 1 0 16 3.2Zm0 23.2c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.5 10.5 0 1 1 16 26.4Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4Z"/></svg></a></div><a class="link" href="#inicio">Início ↑</a></div></footer>
+
+<script>
+(function(){
+  var canvas=document.getElementById('canvas'), ring=document.getElementById('ring');
+  var CW=1172, TAB_MAX=1080, TAB_MIN=701, DW_MIN=920;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // starfield: one 1x1 div per layer, all stars drawn as a box-shadow list
+  function field(n,blur,a0,a1){var o=[];for(var i=0;i<n;i++)o.push((Math.random()*100).toFixed(2)+'vw '+(Math.random()*100).toFixed(2)+'vh '+blur+'px 0 rgba(255,255,255,'+(a0+Math.random()*(a1-a0)).toFixed(2)+')');return o.join(',')}
+  document.getElementById('stA').style.boxShadow=field(150,0,.05,.30);
+  document.getElementById('stB').style.boxShadow=field(18,1.2,.35,.70);
+
+  // ten creatives built from BGTech's own models and services
+  var SHOTS=[
+    {v:'model',url:'/assets/hero-dentista.jpg',seg:'Odontologia',name:'OdontoViva'},
+    {v:'svc',k:'01 · Sites',a:'Sites que',b:'representam',c:'você',bg:'linear-gradient(165deg,#0b2a5c,#1D5BFF 60%,#12E3F0)'},
+    {v:'model',url:'/assets/hero-advocacia.jpg',seg:'Advocacia',name:'Lumen'},
+    {v:'chat'},
+    {v:'model',url:'/assets/hero-contabilidade.jpg',seg:'Contabilidade',name:'Nexo Contábil'},
+    {v:'svc',k:'02 · Sistemas',a:'Agenda,',b:'clientes e',c:'processos',bg:'linear-gradient(165deg,#120f2e,#3b2a8f 55%,#8B5CF6)'},
+    {v:'model',url:'/assets/hero-estetica.jpg',seg:'Estética',name:'Aura Clínica'},
+    {v:'client',url:'/clientes/dd-construcao.jpg'},
+    {v:'model',url:'/assets/hero-restaurante.jpg',seg:'Restaurante',name:'Casa Brasa'},
+    {v:'model',url:'/assets/hero-educacao.jpg',seg:'Educação',name:'Horizonte'}
+  ];
+  function creative(d){
+    var im='<img alt="" src="'+d.url+'">';
+    if(d.v==='model') return '<div class="ph phf">'+im+'</div><div class="fill" style="background:linear-gradient(180deg,rgba(4,8,16,0) 38%,rgba(4,8,16,.88) 70%)"></div>'+
+      '<div class="cv kick" style="top:14px;color:#9fefff">Modelo BGTech</div>'+
+      '<div class="cv kick" style="top:212px;color:#9fefff">'+d.seg+'</div>'+
+      '<div class="cv t-serif" style="top:222px;font-size:15px;color:#fff">'+d.name+'</div>'+
+      '<div class="cv" style="top:250px"><span class="chip" style="background:#fff;color:#0a111d">Navegar ↗</span></div>';
+    if(d.v==='svc') return '<div class="fill" style="background:'+d.bg+'"></div>'+
+      '<div class="cv kick" style="top:20px;color:rgba(255,255,255,.8)">'+d.k+'</div>'+
+      '<div class="cv t-big" style="top:150px;font-size:19px;color:#fff">'+d.a+'</div>'+
+      '<div class="cv t-big" style="top:170px;font-size:19px;color:#fff">'+d.b+'</div>'+
+      '<div class="cv t-big" style="top:190px;font-size:19px;color:#0a111d">'+d.c+'</div>'+
+      '<div class="cv" style="top:262px;font-size:4.6px;letter-spacing:.14em;color:rgba(255,255,255,.75)">BGTECH CONSULTING</div>';
+    if(d.v==='chat') return '<div class="fill" style="background:#0b141a"></div>'+
+      '<div class="cv kick" style="top:20px;color:#5ee6a8">● 03 · Atendimento IA</div>'+
+      '<div class="cv" style="top:52px"><div style="background:#202c33;color:#e9edef;font-size:6px;line-height:1.5;padding:6px 8px;border-radius:8px 8px 8px 2px;width:84%">Oi! Quero agendar uma avaliação amanhã.</div></div>'+
+      '<div class="cv" style="top:92px;display:flex;justify-content:flex-end"><div style="background:#005c4b;color:#e9edef;font-size:6px;line-height:1.5;padding:6px 8px;border-radius:8px 8px 2px 8px;width:84%">Claro! Tenho 9h ou 14h30. Qual prefere?</div></div>'+
+      '<div class="cv" style="top:132px"><div style="background:#202c33;color:#e9edef;font-size:6px;padding:6px 8px;border-radius:8px 8px 8px 2px;width:40%">14h30 ✓</div></div>'+
+      '<div class="cv t-big" style="top:210px;font-size:17px;color:#fff">Atendimento</div>'+
+      '<div class="cv t-big" style="top:228px;font-size:17px;color:#12E3F0">que não dorme</div>';
+    return '<div class="ph" style="top:0;height:150px">'+im+'</div><div class="fill" style="top:150px;background:#fff"></div>'+
+      '<div class="cv kick" style="top:162px;color:#1D5BFF">Cliente real · WordPress</div>'+
+      '<div class="cv t-serif" style="top:174px;font-size:14px;color:#0a111d">D&amp;D Construção</div>'+
+      '<div class="cv" style="top:196px;font-size:5px;line-height:1.6;color:#4a5566">Site institucional com empresa, serviços e canais de contato.</div>'+
+      '<div class="cv" style="top:240px"><span class="chip" style="background:#0a111d;color:#fff">Ver projeto</span></div>';
+  }
+  // ring: R=891 with the camera at the ring's centre (perspective=R), 37 cards, step 360/37, cull beyond 42°
+  var N=37, R=891, STEP=360/N, CULL=42, SPEED=1.9, phase=-2, cards=[];
+  for(var i=0;i<N;i++){var c=document.createElement('div');c.className='card';c.innerHTML=creative(SHOTS[i%10])+'<div class="edge"></div>';
+    (function(card){card.querySelectorAll('img').forEach(function(im){im.addEventListener('error',function(){card.classList.add('broken')})})})(c);
+    ring.appendChild(c);cards.push(c)}
+  function placeCards(){for(var i=0;i<N;i++){var el=cards[i],a=((i*STEP+phase)%360+540)%360-180;
+    if(Math.abs(a)>CULL){el.style.visibility='hidden';continue}el.style.visibility='visible';
+    var r=a*Math.PI/180,c=Math.cos(r);
+    el.style.transform='translate3d('+(R*Math.sin(r)).toFixed(2)+'px,0,'+(R*(1-c)).toFixed(2)+'px) rotateY('+(-a).toFixed(3)+'deg)';
+    el.style.filter='brightness('+(0.84+0.5*(1/c-1)).toFixed(3)+')'}}
+  var last=0;
+  function tick(t){if(!last)last=t;var dt=Math.min((t-last)/1000,.1);last=t;if(!reduce)phase-=SPEED*dt;if(!document.getElementById('top').hidden)placeCards();requestAnimationFrame(tick)}
+  document.addEventListener('visibilitychange',function(){last=0});
+
+  // scale law: k=min(vw/W, vh/560) — 560, not 657, so width fills and the mock bleeds off the foot
+  function resize(){
+    var vw=innerWidth, vh=innerHeight, st=canvas.style;
+    if(vw<=700){['--k','--fill','--stshift','--sshift','--rs'].forEach(function(p){st.removeProperty(p)});document.getElementById('top').style.height='';closeMenu();return}
+    var W=CW, ramp=0;
+    if(vw<=TAB_MAX){W=DW_MIN+(vw-TAB_MIN)*(CW-DW_MIN)/(TAB_MAX-TAB_MIN);if(vh>vw*1.15)W=Math.min(W,900);ramp=Math.min(1,(TAB_MAX-vw)/120)}
+    else closeMenu();
+    var k=Math.min(vw/W,vh/560), fill=Math.max(0,vh/k-657), ss=0, rs=1, sh=0;
+    if(fill>0&&ramp>0){ss=Math.min(fill*.55,420)*ramp;rs=1+Math.min(fill/1100,.75)*ramp;var slack=219.5-125*rs+ss;sh=Math.max(0,slack/2-28)*ramp;fill-=ss}
+    fill=Math.max(fill,201);
+    document.getElementById('top').style.height=Math.max(vh,Math.ceil((558+(ramp?ss:0)+99+fill)*k))+'px';
+    st.setProperty('--k',k);st.setProperty('--fill',fill+'px');
+    document.querySelector('.stack').style.transform=ramp?'translateY('+sh+'px)':'';
+    document.getElementById('showcase').style.transform=ramp?'translateY('+ss+'px)':'';
+    ring.style.transform=ramp?'scale('+rs+')':'';ring.style.transformOrigin='586px 595px';
+  }
+  // menu
+  var nav=document.getElementById('nav'), burger=document.getElementById('burger');
+  function closeMenu(){nav.classList.remove('open');burger.setAttribute('aria-expanded','false')}
+  burger.addEventListener('click',function(e){e.stopPropagation();var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target))closeMenu()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();burger.focus()}});
+  document.getElementById('navmenu').addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
+
+  addEventListener('resize',resize); if(window.visualViewport)visualViewport.addEventListener('resize',resize);
+  resize(); requestAnimationFrame(tick);
+
+
+  // AI chat demo: scripted conversation that loops; keeps the latest 4 bubbles so it stays in the visible part of the mock
+  (function(){
+    var box=document.getElementById('msgs'), prev=document.getElementById('cvPrev');
+    var F=function(k){return document.querySelector('[data-f="'+k+'"]')};
+    var SCRIPT=[
+      ['in','Oi! Vocês fazem limpeza de pele? Queria marcar essa semana.'],
+      ['out','Olá, Mariana! Fazemos sim 😊 Tenho quinta às 10h ou sexta às 16h30. Qual fica melhor?',{nome:'Mariana Souza',serv:'Limpeza de pele'}],
+      ['in','Sexta às 16h30!'],
+      ['out','Agendado: sexta, 16h30 ✓ Envio um lembrete na véspera. Posso ajudar em mais algo?',{hora:'Sex · 16h30',st:'ok'}],
+      ['in','Só isso, obrigada!']
+    ];
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, i=0, timer;
+    function trim(){while(box.children.length>3)box.removeChild(box.firstChild)}
+    function bubble(dir,txt){var d=document.createElement('div');d.className='m '+dir;d.innerHTML=(dir==='out'?'<small>ASSISTENTE IA · BGTECH</small>':'')+txt;box.appendChild(d);trim();return d}
+    function setF(o){if(!o)return;for(var k in o){var el=F(k);if(k==='st'){el.innerHTML='<span class="st ok">Agendado ✓</span>'}else{el.textContent=o[k]}el.classList.add('new')}}
+    function reset(){box.innerHTML='';['nome','serv','hora'].forEach(function(k){F(k).textContent='—';F(k).classList.remove('new')});F('st').innerHTML='<span class="st">Em atendimento</span>'}
+    if(reduce){SCRIPT.forEach(function(s){bubble(s[0],s[1]);setF(s[2])});prev.textContent='Agendado ✓';return}
+    function step(){
+      if(i>=SCRIPT.length){timer=setTimeout(function(){i=0;reset();step()},3200);return}
+      var s=SCRIPT[i];
+      var t=bubble(s[0],'<span></span><span></span><span></span>');t.className='m typing'+(s[0]==='out'?' out':' in');
+      prev.textContent=s[0]==='out'?'IA respondendo…':'digitando…';
+      timer=setTimeout(function(){t.remove();bubble(s[0],s[1]);setF(s[2]);prev.textContent=s[1].slice(0,26)+'…';i++;timer=setTimeout(step,1100)},s[0]==='out'?1300:900);
+    }
+    setTimeout(step,1800);
+  })();
+
+
+  // ===== page router: each page is a hash (#solucoes, #modelos…); a curtain sweep covers the swap =====
+  (function(){
+    var NAMES=['inicio','solucoes','modelos','clientes','sobre','contato'];
+    var views={}; document.querySelectorAll('[data-view]').forEach(function(v){views[v.dataset.view]=v});
+    var head=document.getElementById('subHead'), cur=null, busy=false;
+    var curtain=document.getElementById('curtain'), ci=curtain.querySelector('i'), cb=curtain.querySelector('b');
+    var nf=new Intl.NumberFormat('pt-BR');
+    function count(view){
+      view.querySelectorAll('[data-count]').forEach(function(el){
+        var n=+el.dataset.count, sfx=el.dataset.suffix||'';
+        if(reduce){el.textContent=nf.format(n)+sfx;return}
+        var t0=null, dur=1700, delay=600;
+        el.textContent='0'+sfx;
+        function f(t){if(!t0)t0=t+delay;var p=Math.max(0,Math.min(1,(t-t0)/dur)),e=1-Math.pow(1-p,4);el.textContent=nf.format(Math.round(n*e))+sfx;if(p<1)requestAnimationFrame(f)}
+        requestAnimationFrame(f);
+      });
+    }
+    function mark(name){
+      document.querySelectorAll('.sub-links a, .links a').forEach(function(a){
+        var h=a.getAttribute('href').slice(1); if(h===name)a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      });
+    }
+    function show(name){
+      for(var k in views){views[k].hidden=(k!==name);views[k].classList.remove('in')}
+      head.classList.remove('off');
+      window.scrollTo(0,0);
+      void views[name].offsetWidth;            // restart the page's entrance animations
+      views[name].classList.add('in');
+      count(views[name]); mark(name); cur=name;
+    }
+    function go(name,instant){
+      if(NAMES.indexOf(name)<0)name='inicio';
+      if(name===cur||busy)return;
+      if(instant||reduce||!ci.animate||cur===null){show(name);return}
+      busy=true; curtain.style.visibility='visible';
+      var E='cubic-bezier(.7,0,.2,1)';
+      cb.animate([{transform:'translateX(-50vw)'},{transform:'translateX(110vw)'}],{duration:760,easing:E});
+      ci.style.transformOrigin='left';
+      ci.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:380,easing:E,fill:'forwards'}).finished.then(function(){
+        show(name);
+        ci.style.transformOrigin='right';
+        return ci.animate([{transform:'scaleX(1)'},{transform:'scaleX(0)'}],{duration:420,easing:E,fill:'forwards'}).finished;
+      }).then(function(){curtain.style.visibility='hidden';busy=false},function(){curtain.style.visibility='hidden';busy=false});
+    }
+    addEventListener('hashchange',function(){go(location.hash.slice(1))});
+    go(location.hash.slice(1),true);
+
+    // modelos: segment filter + tilt with a light that follows the pointer
+    var chips=document.querySelectorAll('.chips button');
+    chips.forEach(function(b){b.addEventListener('click',function(){
+      chips.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      var f=b.dataset.f, k=0;
+      document.querySelectorAll('#mgrid .mcard').forEach(function(c){var on=f==='all'||c.dataset.cat===f;c.hidden=!on;
+        if(on&&!reduce&&c.animate)c.animate([{opacity:0,transform:'translateY(18px) scale(.97)'},{opacity:1,transform:'none'}],{duration:520,delay:(k++)*70,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'})});
+    })});
+    if(!reduce&&matchMedia('(hover:hover)').matches){
+      document.querySelectorAll('.mcard').forEach(function(c){
+        c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+          c.style.transform='rotateY('+((x-.5)*10).toFixed(2)+'deg) rotateX('+((.5-y)*8).toFixed(2)+'deg)';
+          c.style.setProperty('--mx',(x*100)+'%');c.style.setProperty('--my',(y*100)+'%')});
+        c.addEventListener('pointerleave',function(){c.style.transform=''});
+      });
+    }
+
+    // contato: builds the WhatsApp message locally; nothing is sent anywhere by the page
+    var form=document.getElementById('form'), done=document.getElementById('done'), err=document.getElementById('err');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var nome=form.nome.value.trim(), neg=form.negocio.value.trim(), msg=form.msg.value.trim();
+      var o=[].slice.call(form.querySelectorAll('input[name="o"]:checked')).map(function(i){return i.value});
+      if(!nome){err.textContent='Escreva seu nome para eu saber com quem estou falando.';form.nome.focus();return}
+      if(!o.length&&!msg){err.textContent='Marque o que você precisa ou conte um pouco sobre o projeto.';return}
+      err.textContent='';
+      var txt='Olá, Bruno! Sou '+nome+(neg?', da '+neg:'')+'.'+(o.length?' Tenho interesse em: '+o.join(', ')+'.':'')+(msg?' '+msg:'');
+      document.getElementById('waLink').href='https://wa.me/5511920193443?text='+encodeURIComponent(txt);
+      document.getElementById('doneTxt').textContent='“'+txt+'” — toque no botão para enviar pelo WhatsApp. Se não abrir, mande para (11) 92019-3443.';
+      form.hidden=true; done.hidden=false;
+    });
+    document.getElementById('again').addEventListener('click',function(){done.hidden=true;form.hidden=false;form.nome.focus()});
+  })();
+
+  // ===== demos page: tabs, scheduling system demo, AI agent demo =====
+  (function(){
+    // tabs (arrow keys move between them)
+    var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
+    function select(t,focus){
+      tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;var p=document.getElementById(x.getAttribute('aria-controls'));p.hidden=!on;if(on){p.classList.remove('enter');void p.offsetWidth;p.classList.add('enter')}});
+      if(focus)t.focus();
+      if(t.id==='t-ia')aiStart();
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){select(t)});
+      t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();select(tabs[(i+d+tabs.length)%tabs.length],true)}});
+    });
+
+    // ---- scheduling demo (fictitious data, nothing leaves the page) ----
+    var TIMES=['09:00','10:00','11:00','13:00','14:00','15:00','16:00','17:00'];
+    var NAMES=['Mariana','Rafael','Juliana','Carlos','Patrícia','Diego','Lívia','Renata','Bruna','Felipe'];
+    var SERVS=['Limpeza de pele','Massagem relaxante','Design de sobrancelha'];
+    var WD=['dom','seg','ter','qua','qui','sex','sáb'];
+    var days=[], d=new Date(); d.setHours(12,0,0,0);
+    while(days.length<5){d.setDate(d.getDate()+1);if(d.getDay()!==0&&d.getDay()!==6)days.push(new Date(d))}
+    var book={};   // key "dayIndex|time" -> {name, serv, mine}
+    days.forEach(function(_,di){TIMES.forEach(function(t,ti){if((di*3+ti*5)%7<3)book[di+'|'+t]={name:NAMES[(di*2+ti)%NAMES.length],serv:SERVS[(di+ti)%3]}})});
+    var selDay=0, selTime=null, fresh=null;
+    var elDays=document.getElementById('bkDays'), elTimes=document.getElementById('bkTimes'), agenda=document.getElementById('agenda');
+    var fmt=function(x){return x.getDate().toString().padStart(2,'0')+'/'+(x.getMonth()+1).toString().padStart(2,'0')};
+    function renderDays(){elDays.innerHTML='';days.forEach(function(x,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',i===selDay);b.innerHTML=WD[x.getDay()]+'<small>'+fmt(x)+'</small>';b.onclick=function(){selDay=i;selTime=null;fresh=null;renderAll()};elDays.appendChild(b)})}
+    function renderTimes(){elTimes.innerHTML='';TIMES.forEach(function(t){var b=document.createElement('button');b.type='button';b.textContent=t;var taken=!!book[selDay+'|'+t];b.disabled=taken;if(taken)b.setAttribute('aria-label',t+', ocupado');b.setAttribute('aria-pressed',t===selTime);b.onclick=function(){selTime=t;renderTimes()};elTimes.appendChild(b)})}
+    function renderAgenda(){
+      var x=days[selDay];document.getElementById('dDay').textContent='Agenda de '+WD[x.getDay()]+', '+fmt(x);
+      agenda.innerHTML='';var tot=0;
+      TIMES.forEach(function(t){var k=selDay+'|'+t,bk=book[k],li=document.createElement('li');
+        if(bk){tot++;li.innerHTML='<time>'+t+'</time><div><b></b><span></span></div><em>'+(bk.mine?'Novo':'Confirmado')+'</em>';li.querySelector('b').textContent=bk.name;li.querySelector('span').textContent=bk.serv;if(k===fresh)li.className='new'}
+        else{li.className='free';li.innerHTML='<time>'+t+'</time><div><b>Livre</b><span>disponível para agendamento</span></div><em>Livre</em>'}
+        agenda.appendChild(li)});
+      document.getElementById('kTot').textContent=tot;document.getElementById('kFree').textContent=TIMES.length-tot;
+    }
+    function renderAll(){renderDays();renderTimes();renderAgenda()}
+    renderAll();
+    document.getElementById('bkGo').addEventListener('click',function(){
+      var err=document.getElementById('bkErr'), nm=document.getElementById('bkName').value.trim();
+      err.style.color='';
+      if(!selTime){err.textContent='Escolha um horário livre.';return}
+      if(!nm){err.textContent='Escreva seu nome para confirmar.';document.getElementById('bkName').focus();return}
+      var serv=document.querySelector('input[name=serv]:checked').value;
+      fresh=selDay+'|'+selTime; book[fresh]={name:nm,serv:serv,mine:true};
+      err.style.color='#7ef0bd'; err.textContent='Agendado para '+WD[days[selDay].getDay()]+', '+fmt(days[selDay])+' às '+selTime+'. Veja no painel ao lado.';
+      selTime=null; renderTimes(); renderAgenda();
+      ['kTot','kFree'].forEach(function(id){var b=document.getElementById(id);b.classList.remove('bump');void b.offsetWidth;b.classList.add('bump')});
+      if(innerWidth<=860)document.querySelector('.dash').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    });
+
+    // ---- AI agent demo: scripted answers matched by keywords ----
+    var msgs=document.getElementById('aiMsgs'), quick=document.getElementById('aiQuick'), started=false, busy=false;
+    var QUICK=['O que a BGTech faz?','Como funciona o agente de IA?','Quanto custa?','Em quanto tempo fica pronto?','Quero falar com o Bruno'];
+    var RULES=[
+      [/(oi|ol[aá]|bom dia|boa tarde|boa noite|e a[ií])/i,'Olá! Sou o assistente da BGTech. Posso explicar nossos serviços, como funciona um agente de IA ou te ajudar a falar com o Bruno.'],
+      [/(agente|\bia\b|intelig|rob[oô]|bot|whats|atendimento)/i,'O agente de IA atende seus clientes no WhatsApp a qualquer hora: responde dúvidas, agenda horários, envia lembretes e organiza cada pedido.\nQuando a conversa pede uma pessoa, ele passa para você na hora certa. Ele é configurado com os seus serviços, preços e regras.'],
+      [/(pre[cç]o|valor|custa|quanto|or[cç]amento)/i,'Cada projeto é orçado de acordo com o que o seu negócio precisa. Na primeira conversa o Bruno entende sua rotina e envia uma proposta com etapas e valores.'],
+      [/(prazo|tempo|demora|pronto|quando)/i,'Depende do tamanho do projeto. O prazo é combinado antes de começar, com etapas e entregas alinhadas, e você acompanha cada fase.'],
+      [/(sistema|agenda|agendamento|painel|cadastro)/i,'Fazemos sistemas sob medida: agenda online, cadastro e histórico de clientes e painéis simples de usar. Na aba Sistemas você pode testar um agendamento.'],
+      [/(site|p[aá]gina|landing|google)/i,'Criamos sites que representam o seu negócio, prontos para celular e Google, com botão direto para o WhatsApp. Na aba Sites tem seis modelos para navegar.'],
+      [/(faz|servi[cç]o|oferece|trabalha)/i,'A BGTech trabalha em três frentes:\n• Sites que representam você\n• Sistemas sob medida\n• Agentes de IA que atendem no WhatsApp\nElas funcionam sozinhas ou em conjunto.'],
+      [/(bruno|falar|contato|conversar|marcar|reuni[aã]o|humano|pessoa)/i,'Claro! Na página Contato você monta sua mensagem e envia direto para o Bruno pelo WhatsApp. Ele responde pessoalmente.','contato']
+    ];
+    function add(cls,text,link){var m=document.createElement('div');m.className='am '+cls;m.textContent=text;
+      if(link){var a=document.createElement('a');a.href='#'+link;a.className='link';a.style.display='block';a.style.marginTop='8px';a.textContent='Ir para Contato →';m.appendChild(a)}
+      msgs.appendChild(m);msgs.scrollTop=msgs.scrollHeight;return m}
+    function reply(q){
+      var r=null;for(var i=0;i<RULES.length;i++){if(RULES[i][0].test(q)){r=RULES[i];break}}
+      var text=r?r[1]:'Boa pergunta! Essa eu prefiro deixar para o Bruno responder pessoalmente. Quer falar com ele?', link=r?r[2]:'contato';
+      busy=true;document.getElementById('aiStatus').textContent='digitando…';
+      var t=add('bot typing','');t.innerHTML='<i></i><i></i><i></i>';
+      setTimeout(function(){t.remove();add('bot',text,link);busy=false;document.getElementById('aiStatus').textContent='online'},reduce?0:Math.min(1800,600+text.length*6));
+    }
+    function ask(q){q=q.trim();if(!q||busy)return;add('me',q);reply(q)}
+    QUICK.forEach(function(q){var b=document.createElement('button');b.type='button';b.textContent=q;b.onclick=function(){ask(q)};quick.appendChild(b)});
+    document.getElementById('aiForm').addEventListener('submit',function(e){e.preventDefault();var i=document.getElementById('aiIn');ask(i.value);i.value=''});
+    function aiStart(){if(started)return;started=true;add('bot','Olá! Sou o assistente da BGTech 👋 Posso explicar nossos serviços, como funciona um agente de IA ou te ajudar a falar com o Bruno. O que você quer saber?')}
+  })();
+
+  // entrance: animates translate/scale/clipPath (not transform, which the scaler and ring own), runs once then cancels
+  (function(){
+    var H=document.documentElement;
+    function settle(){document.getAnimations().forEach(function(a){if(String(a.id).indexOf('intro:')===0)a.cancel()});H.classList.remove('intro')}
+    if(!H.classList.contains('intro')||reduce||!Element.prototype.animate){settle();return}
+    var D=innerWidth<=700?.66:1, EXPO='cubic-bezier(.16,1,.3,1)', SOFT='cubic-bezier(.22,.61,.36,1)', n=0, lastA=null, lastEnd=0;
+    function Y(px){return '0 '+(px*D)+'px'}
+    function play(el,from,dur,delay,ease){if(!el)return;var to={opacity:1};if(from.translate)to.translate='0 0';if(from.scale)to.scale='1';if(from.clipPath)to.clipPath='inset(-30% 0 -30% 0)';
+      var a=el.animate([from,to],{duration:dur,delay:delay,easing:ease,fill:'both'});a.id='intro:'+(n++);if(dur+delay>lastEnd){lastEnd=dur+delay;lastA=a}}
+    var $=function(s){return document.querySelector(s)};
+    play($('.nav'),{opacity:0,translate:Y(-9)},620,60,EXPO);
+    play($('.logo'),{opacity:0,translate:Y(6)},520,150,SOFT);
+    document.querySelectorAll('.links a').forEach(function(a,i){play(a,{opacity:0,translate:Y(6)},460,215+i*45,SOFT)});
+    play($('.nav .btn'),{opacity:0,translate:Y(6)},500,400,SOFT);
+    play($('.badge'),{opacity:0,translate:Y(11),scale:.985},560,270,EXPO);
+    play($('#h1a'),{opacity:0,translate:Y(15),clipPath:'inset(100% 0 -30% 0)'},900,380,EXPO);
+    play($('#h1b'),{opacity:0,translate:Y(15),clipPath:'inset(100% 0 -30% 0)'},900,470,EXPO);
+    play($('#sub1'),{opacity:0,translate:Y(10)},620,690,EXPO);
+    play($('#sub2'),{opacity:0,translate:Y(10)},620,745,EXPO);
+    play($('.cta2'),{opacity:0,translate:Y(13),scale:.985},620,830,EXPO);
+    play(ring,{opacity:0,translate:Y(18),scale:.99},950,700,EXPO);
+    play($('.browser'),{opacity:0,translate:Y(26)},900,900,EXPO);
+    play($('.wa'),{opacity:0,scale:.88},500,1260,EXPO);
+    lastA.finished.then(settle).catch(settle);
+  })();
+})();
+</script>
+
 </body>
 </html>
