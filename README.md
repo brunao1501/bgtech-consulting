@@ -4,11 +4,12 @@ Site oficial da **BGTech Consulting** — sites profissionais, sistemas sob medi
 
 ## Estrutura
 
-- Página institucional e formulário integrado ao WhatsApp
-- Seis modelos navegáveis: odontologia, advocacia, contabilidade, estética, restaurante e educação
-- Layout responsivo para computador e celular
-- Animações com suporte a preferência de movimento reduzido
-- Contatos oficiais da BGTech Consulting
+- `dist/index.html`: site em páginas (Início, Soluções, Experimente, Clientes, Sobre e Contato), navegação por endereço (`#solucoes`, `#modelos`…) com transição entre páginas
+- Início com carrossel 3D dos modelos e painel de atendimento com IA animado
+- Experimente: modelos de sites, demonstração de agendamento e assistente de IA simulado
+- Contato com mensagem montada para o WhatsApp e links do Instagram
+- Seis modelos navegáveis em `dist/modelos/`
+- Layout responsivo e suporte a movimento reduzido
 
 ## Executar localmente
 
