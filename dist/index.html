@@ -584,6 +584,11 @@ fieldset.field{border:0}
 .cwa{background:#1ea952}
 .cig{background:linear-gradient(45deg,#e8a21f,#d6246e 50%,#6228d7)}
 .handle{font-size:13px;color:#7d8693;text-align:center;user-select:all}
+
+/* badge sizes to its label so the text can never spill out of the box */
+.badge{left:586px!important;transform:translateX(-50%);width:auto!important;white-space:nowrap}
+.badge b{position:relative!important;left:auto!important;padding:1.5px 18px 0 45px}
+@media (max-width:700px){.badge{left:auto!important;transform:none}.badge b{padding:0 15px 0 42px}}
 </style>
 </head>
 <body>
