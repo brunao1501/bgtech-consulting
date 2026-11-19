@@ -26,33 +26,13 @@
       "permanent": false
     },
     {
-      "source": "/dentista/:path*",
-      "destination": "/modelos/dentista/:path*",
+      "source": "/:slug(dentista|advocacia|contabilidade|estetica|restaurante|educacao)",
+      "destination": "/modelos/:slug/",
       "permanent": true
     },
     {
-      "source": "/advocacia/:path*",
-      "destination": "/modelos/advocacia/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/contabilidade/:path*",
-      "destination": "/modelos/contabilidade/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/estetica/:path*",
-      "destination": "/modelos/estetica/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/restaurante/:path*",
-      "destination": "/modelos/restaurante/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/educacao/:path*",
-      "destination": "/modelos/educacao/:path*",
+      "source": "/:slug(dentista|advocacia|contabilidade|estetica|restaurante|educacao)/:path*",
+      "destination": "/modelos/:slug/:path*",
       "permanent": true
     }
   ]
